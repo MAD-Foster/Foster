@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Foster</string>
+    <string name="TVstart">Tap anywhere to continue</string>
+    <string name="TVLoginText">Login to your Account</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="music_title">MUSIC</string>
+</resources>

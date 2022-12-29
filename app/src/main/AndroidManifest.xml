@@ -13,6 +13,23 @@
         android:theme="@style/Theme.Foster"
         tools:targetApi="31">
         <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".WorkoutActivity"
+            android:exported="false"
+            android:label="@string/title_activity_workout"
+            android:theme="@style/Theme.Foster.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MusicActivity"
             android:exported="false">
             <meta-data

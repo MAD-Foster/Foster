@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <group android:id="@+id/SideNavMain">
+        <item
+            android:id="@+id/DestHome"
+            android:title="@string/menu_home_title" />
+        <item
+            android:id="@+id/DestAboutApp"
+            android:title="@string/aboutapp_title" />
+    </group>
+
+    <group android:id="@+id/SideNavCoreFunction">
+        <item
+            android:id="@+id/DestWorkoutPage"
+            android:title="@string/workout_sidenav_title" />
+        <item
+            android:id="@+id/DestMusicPage"
+            android:title="@string/music_sidenav_title" />
+
+        <item
+            android:id="@+id/DestStepsPage"
+            android:title="@string/steps_sidenav_title" />
+
+    </group>
+    <group android:id="@+id/SideNavSettings">
+        <item
+            android:id="@+id/DestSettings"
+            android:title="@string/acc_settings_title"/>
+        <item
+            android:id="@+id/DestLogout"
+            android:title="@string/logout_title"/>
+    </group>
 </menu>

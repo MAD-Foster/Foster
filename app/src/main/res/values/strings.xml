@@ -8,7 +8,7 @@
     <string name="steps_title">STEPS</string>
     <string name="workout_title">WORKOUT</string>
     <string name="home_title">HOMEPAGE</string>
-    <string name="acc_settings_title">Account Settings</string>
+    <string name="acc_settings_title">Settings</string>
     <string name="title_activity_workout">WorkoutActivity</string>
     <string name="menu_home_title">Home</string>
     <string name="logout_title">Logout</string>
@@ -16,6 +16,9 @@
     <string name="workout_sidenav_title">Workout</string>
     <string name="music_sidenav_title">Music</string>
     <string name="steps_sidenav_title">Steps</string>
+
+    <string name="navigation_drawer_open">More option</string>
+    <string name="navigation_drawer_close">2</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

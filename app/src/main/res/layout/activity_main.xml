@@ -1,41 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CLMain"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="427dp"
+        android:layout_height="936dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/bg_foster" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/TBMainAct"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"/>
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/NHFMain"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/navigation_foster" />
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:menu="@menu/menu_bottom" />
-
-    </LinearLayout>
-
-
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/TBMainAct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    app:titleTextColor="@color/black"
+    app:menu="@menu/menu_overflow"/>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/sideNav"
@@ -43,5 +29,40 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/menu_side" />
-</androidx.drawerlayout.widget.DrawerLayout>
+        app:menu="@menu/menu_side"
+        />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#EB0000"
+        app:backgroundTint="@color/maroon"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+        app:fabCradleVerticalOffset="10dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/transparent_background"
+            app:backgroundTint="#1D0202"
+            app:menu="@menu/menu_bottom" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        android:backgroundTint="@color/maroon"
+        android:src="@drawable/ic_baseline_home_24"
+        app:layout_anchor="@id/bottomAppBar" />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

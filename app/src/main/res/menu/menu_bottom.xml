@@ -18,6 +18,7 @@
         android:title="@string/music_sidenav_title" />
     <item
         android:id="@+id/placeHolder"
+        android:clickable="false"
         android:title="" />
     <item
         android:id="@+id/DestStepsPage"

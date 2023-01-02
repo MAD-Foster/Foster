@@ -4,31 +4,61 @@
     <group android:id="@+id/SideNavMain">
         <item
             android:id="@+id/DestHome"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:state_pressed="true"
+            android:color="#2C0000"
+
             android:title="@string/menu_home_title" />
-        <item
-            android:id="@+id/DestAboutApp"
-            android:title="@string/aboutapp_title" />
+
     </group>
 
-    <group android:id="@+id/SideNavCoreFunction">
+<item android:title="Main"
+    android:textSize="10sp"
+    android:textColor="@color/black">
+
+    <menu>
+
         <item
             android:id="@+id/DestWorkoutPage"
+            android:icon="@drawable/fitness_svgrepo_com"
             android:title="@string/workout_sidenav_title" />
         <item
             android:id="@+id/DestMusicPage"
+            android:icon="@drawable/ic_baseline_audiotrack_24"
+            android:textColor="@color/white"
             android:title="@string/music_sidenav_title" />
 
         <item
             android:id="@+id/DestStepsPage"
+            android:icon="@drawable/ic_baseline_directions_run_24"
+            android:textColor="@color/white"
             android:title="@string/steps_sidenav_title" />
 
-    </group>
-    <group android:id="@+id/SideNavSettings">
-        <item
-            android:id="@+id/DestSettings"
-            android:title="@string/acc_settings_title"/>
-        <item
-            android:id="@+id/DestLogout"
-            android:title="@string/logout_title"/>
-    </group>
+
+    </menu>
+</item>
+<group android:checkableBehavior="single">
+    <item android:title="More">
+        <menu>
+
+            <item
+                android:id="@+id/DestSettings"
+                android:icon="@drawable/ic_baseline_settings_24"
+                android:textColor="@color/white"
+                android:title="@string/acc_settings_title"/>
+            <item
+                android:id="@+id/DestAboutApp"
+                android:icon="@drawable/ic_baseline_info_24"
+                android:textColor="@color/white"
+                android:title="@string/aboutapp_title" />
+            <item
+                android:id="@+id/DestLogout"
+                android:icon="@drawable/ic_baseline_logout_24"
+                android:textColor="@color/white"
+                android:title="@string/logout_title"/>
+        </menu>
+    </item>
+</group>
+
+
 </menu>

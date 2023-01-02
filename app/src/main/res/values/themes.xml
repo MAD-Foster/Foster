@@ -25,14 +25,16 @@
 
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/white</item>
-<!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
-<!--        <item name="colorOnPrimary">@color/purple_700</item>-->
+
+        <item name="android:textColorPrimary">@color/black</item>
+
+        <item name="colorOnPrimary">@color/black</item>
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="color">@color/maroon</item>
-        <item name="android:textColorPrimary">@color/purple_200</item>
         <item name="android:textColorSecondary">@color/white</item>
+        <!-- floating color -->
         <item name="colorOnSecondary">@color/black</item>
 
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>

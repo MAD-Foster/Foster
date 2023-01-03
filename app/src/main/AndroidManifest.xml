@@ -21,7 +21,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".WorkoutActivity"
+            android:name=".StartActivity"
             android:exported="false"
             android:label="@string/title_activity_workout"
             android:theme="@style/Theme.Foster.NoActionBar">
@@ -51,7 +51,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".StartActivity"
+            android:name=".WorkoutActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

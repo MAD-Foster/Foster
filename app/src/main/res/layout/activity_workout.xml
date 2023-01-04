@@ -58,18 +58,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="left"
                 android:paddingTop="70dp"
                 android:paddingBottom="25dp"
-                android:text="Choose your Exercise:"
+                android:text="CHOOSE YOUR EXERCISES :"
                 android:textColor="#FFFFFF"
-                android:textSize="25sp"
+                android:textSize="23sp"
                 android:textStyle="italic|bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="Sweat Your Way to Success"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF"/>
 
             <ScrollView
                 android:layout_width="wrap_content"

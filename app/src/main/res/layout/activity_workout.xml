@@ -61,7 +61,7 @@
                 android:layout_gravity="center"
                 android:paddingTop="70dp"
                 android:paddingBottom="25dp"
-                android:text="Choose your program:"
+                android:text="Choose your Exercise:"
                 android:textColor="#FFFFFF"
                 android:textSize="25sp"
                 android:textStyle="italic|bold" />

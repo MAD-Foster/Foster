@@ -56,9 +56,21 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        int i=R.drawable.img_begg;
+        int Beg=R.drawable.img_begg;
         ImageView imageView=(ImageView)findViewById(R.id.IV1);
-        roundImage(imageView,i);
+        roundImage(imageView,Beg);
+
+        int Inter=R.drawable.img_inter;
+        ImageView imageView1=(ImageView)findViewById(R.id.IV2);
+        roundImage(imageView1,Inter);
+
+        int Fat=R.drawable.img_fatloss;
+        ImageView imageView2=(ImageView)findViewById(R.id.IV3);
+        roundImage(imageView2,Fat);
+
+        int Exp=R.drawable.img_exp;
+        ImageView imageView3=(ImageView)findViewById(R.id.IV4);
+        roundImage(imageView3,Exp);
     }
 
     @Override

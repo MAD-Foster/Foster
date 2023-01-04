@@ -51,29 +51,31 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="800dp"
             android:layout_gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="left"
                 android:paddingTop="70dp"
                 android:paddingBottom="25dp"
-                android:text="Choose your Exercise:"
+                android:text="CHOOSE YOUR EXERCISES :"
                 android:textColor="#FFFFFF"
-                android:textSize="25sp"
+                android:textSize="23sp"
                 android:textStyle="italic|bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="Sweat Your Way to Success"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF"/>
 
             <ScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="600dp"
                 android:layout_gravity="center">
 
 
@@ -90,22 +92,35 @@
                         android:layout_height="250dp"
                         android:adjustViewBounds="true"
                         android:scaleType="fitXY"
+                        android:layout_marginTop="100dp"
                         android:src="@drawable/img_begg" />
 
                     <ImageView
+                        android:id="@+id/IV2"
                         android:layout_width="350dp"
                         android:layout_height="250dp"
-                        android:src="@drawable/ic_baseline_image_24" />
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/img_inter" />
 
                     <ImageView
+                        android:id="@+id/IV3"
                         android:layout_width="350dp"
                         android:layout_height="250dp"
-                        android:src="@drawable/ic_baseline_image_24" />
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/img_fatloss" />
 
                     <ImageView
+                        android:id="@+id/IV4"
                         android:layout_width="350dp"
                         android:layout_height="250dp"
-                        android:src="@drawable/ic_baseline_image_24" />
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/img_exp" />
 
 
                 </LinearLayout>

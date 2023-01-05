@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/img_begg"
+                android:src="@drawable/img_fatloss"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,8 +32,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="84dp"
-                android:text="MUSCLE BUILDINGS"
+                android:text="WEIGHT LOSS"
                 android:textColor="#7D1515"
+                android:textSize="17sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,9 +43,9 @@
                 android:layout_width="277dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Ultimate 30 Minutes Beginner's Guide"
+                android:text="1 HOUR CARDIO EXERCISES TO LOSS FAT"
                 android:textColor="@color/white"
-                android:textSize="29sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -54,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="18dp"
                 android:src="@drawable/graph_bar_svgrepo_com"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -64,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="18dp"
                 android:src="@drawable/ic_baseline_local_fire_department_24"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -73,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
-                android:text="Beginner"
+                android:text="Fat Loss"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/imageView5"
@@ -85,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="180dp"
-                android:text="150kcal"
+                android:text="200-300 kcal"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/imageView5"
@@ -117,16 +118,17 @@
                         android:src="@drawable/groupedday1" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Jumping jacks, High knees, Butt kicks, Plank jacks, Side shuffles"
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -148,16 +150,17 @@
                         android:src="@drawable/groupedday2" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Mountain climbers, Squat jumps, Lunges, Skaters, Burpees"
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -179,16 +182,17 @@
                         android:src="@drawable/groupedday3" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Tuck jumps, Box jumps, Star jumps, Jump rope, Butt kicks"
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -210,16 +214,18 @@
                         android:src="@drawable/groupedday4" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
+
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="High knees, Jumping jacks, Power skips, Plank jacks, Side shuffles"
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -241,16 +247,18 @@
                         android:src="@drawable/groupedday5" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
+
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Squat jumps, Lunges, Mountain climbers, Skaters,Burpees"
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -271,16 +279,18 @@
                         android:src="@drawable/groupedday6" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Box jumps, Tuck jumps, Star jumps, Jump rope, Butt kicks"
+
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -300,16 +310,18 @@
                         android:src="@drawable/groupedday7" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="High knees, Jumping jacks, Power skips, Plank jacks, Side shuffles"
+
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -323,5 +335,6 @@
         </ScrollView>
 
     </LinearLayout>
+
 
 </FrameLayout>

@@ -93,6 +93,13 @@
                         android:alpha="0.7"
                         android:layout_marginTop="50dp"
                         android:src="@drawable/img_begg" />
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="208dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/ic_baseline_local_fire_department_24" />
                     <TextView
                         android:id="@+id/TVbegg1"
                         android:layout_width="wrap_content"
@@ -121,22 +128,26 @@
                         android:layout_marginTop="45dp"
                         android:gravity="center"
                         android:textColor="#FFB6C1"/>
-                    <TextView
-                        android:id="@+id/TVbegg3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:text="No Equipment \nLow Impact Exercise \n130 Calories \n20 Minutes \nPush Ups, Plank Crunches etc"
-                        android:layout_alignTop="@id/IV1"
-                        android:layout_alignStart="@id/IV1"
-                        android:layout_alignLeft="@id/IV1"
-                        android:layout_alignRight="@id/IV1"
-                        android:layout_alignEnd="@id/IV1"
-                        android:layout_marginTop="90dp"
-                        android:layout_marginLeft="20dp"
-                        android:textColor="#FFFFFF"/>
 
-                    <ImageView
+                <TextView
+                    android:id="@+id/TVbegg3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/IV1"
+                    android:layout_alignLeft="@id/IV1"
+                    android:layout_alignTop="@id/IV1"
+                    android:layout_alignEnd="@id/IV1"
+                    android:layout_alignRight="@id/IV1"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="95dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
+                    android:inputType="textMultiLine"
+                    android:text="No Equipment \n\nLow Impact Exercise \n\n130 Calories \n\n20 Minutes"
+                    android:textColor="#FFFFFF" />
+
+                <ImageView
                         android:id="@+id/IV2"
                         android:layout_width="350dp"
                         android:layout_height="250dp"
@@ -178,7 +189,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
-                        android:text="Basic Equipments\n Strength\n 220 Calories\n 40 Minutes\n Shoulder press, Biceps Curls,\n Tricep Dips etc"
+                        android:text="Basic Equipments\n\n Strength\n\n 220 Calories\n\n 40 Minutes"
                         android:layout_alignTop="@id/IV2"
                         android:layout_alignLeft="@id/IV2"
                         android:layout_alignStart="@id/IV2"
@@ -187,7 +198,14 @@
                         android:layout_marginTop="90dp"
                         android:textColor="#FFFFFF"
                         android:gravity="right"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="35dp"/>
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="503dp"
+                        android:layout_marginLeft="320dp"
+                        android:src="@drawable/ic_baseline_local_fire_department_24" />
 
                     <ImageView
                         android:id="@+id/IV3"
@@ -231,15 +249,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
-                        android:text="No Equipment \nCircuit Training \n200-300 Calories \n1 Hour \nJogging, Running, Walking etc"
+                        android:text="No Equipment \n\nCircuit Training \n\n200-300 Calories \n\n1 Hour"
                         android:layout_alignTop="@id/IV3"
                         android:layout_alignLeft="@id/IV3"
                         android:layout_alignStart="@id/IV3"
                         android:layout_alignRight="@id/IV3"
                         android:layout_alignEnd="@id/IV3"
                         android:layout_marginTop="90dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="35dp"
                         android:textColor="#FFFFFF"/>
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="802dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/ic_baseline_local_fire_department_24" />
 
                     <ImageView
                         android:id="@+id/IV4"
@@ -283,7 +308,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
-                        android:text="Full Equipments\n Strength &amp; Muscle Training\n 450 Calories\n 1 Hour 20 Minutes\n Bench Press, Shoulder Press,\n Deadlift, Squats etc"
+                        android:text="Full Equipments\n\n Strength &amp; Muscle Training\n\n 450 Calories\n\n 1 Hour 20 Minutes"
                         android:layout_alignTop="@id/IV4"
                         android:layout_alignLeft="@id/IV4"
                         android:layout_alignStart="@id/IV4"
@@ -292,7 +317,14 @@
                         android:layout_marginTop="90dp"
                         android:textColor="#FFFFFF"
                         android:gravity="right"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="35dp"/>
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="1102dp"
+                        android:layout_marginLeft="320dp"
+                        android:src="@drawable/ic_baseline_local_fire_department_24" />
 
 
                 </RelativeLayout>

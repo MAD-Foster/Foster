@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".BeginnerFragment">
 
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:src="@drawable/bg_foster" />-->
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -121,7 +127,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Push up, Squat, Barbell curl\n"
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -152,7 +159,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Push up, Squat, Barbell curl\n"
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -183,7 +191,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+
+                        android:text="Push up, Squat, Barbell curl\n"
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -213,8 +223,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
+
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Push up, Squat, Barbell curl\n"
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -244,8 +256,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
+
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Push up, Squat, Barbell curl\n"
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -275,7 +289,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Push up, Squat, Barbell curl\n"
+
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -304,7 +320,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="20dp"
-                        android:text="Push up, Squat, Barbell curl\n" />
+                        android:text="Push up, Squat, Barbell curl\n"
+
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:layout_width="wrap_content"

@@ -33,7 +33,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="84dp"
                 android:text="WEIGHT LOSS"
-                android:textColor="#7D1515"
+                android:textColor="#FF6666"
                 android:textSize="17sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
                 android:text="Fat Loss"
-                android:textColor="@color/white"
+                android:textColor="#FFB6C1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/imageView5"
                 app:layout_constraintTop_toTopOf="parent"
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="180dp"
                 android:text="200-300 kcal"
-                android:textColor="@color/white"
+                android:textColor="#FFB6C1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/imageView5"
                 app:layout_constraintTop_toTopOf="parent"
@@ -107,6 +107,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="20dp"
                     android:orientation="horizontal">
 

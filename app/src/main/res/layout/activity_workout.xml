@@ -57,7 +57,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:text="TRAINING PLAN"
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:text="Sweat Your Way to Success"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:textSize="15sp"
                 android:textColor="#FFA07A"/>
 
@@ -100,6 +100,28 @@
                         android:layout_marginTop="208dp"
                         android:layout_marginLeft="8dp"
                         android:src="@drawable/ic_baseline_local_fire_department_24" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="240dp"
+                    android:src="@drawable/ic_baseline_timer_24" />
+
+
+                <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="173dp"
+                        android:src="@drawable/graph_bar_svgrepo_com"/>
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="143dp"
+                    android:src="@drawable/img_dumbell"/>
                     <TextView
                         android:id="@+id/TVbegg1"
                         android:layout_width="wrap_content"
@@ -110,7 +132,7 @@
                         android:layout_alignStart="@id/IV1"
                         android:layout_alignRight="@id/IV1"
                         android:layout_alignEnd="@id/IV1"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#FF6666"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:textSize="23sp"
@@ -138,11 +160,9 @@
                     android:layout_alignTop="@id/IV1"
                     android:layout_alignEnd="@id/IV1"
                     android:layout_alignRight="@id/IV1"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginTop="95dp"
                     android:layout_marginEnd="0dp"
-                    android:layout_marginRight="0dp"
                     android:inputType="textMultiLine"
                     android:text="No Equipment \n\nLow Impact Exercise \n\n130 Calories \n\n20 Minutes"
                     android:textColor="#FFFFFF" />
@@ -166,7 +186,7 @@
                         android:layout_alignStart="@id/IV2"
                         android:layout_alignRight="@id/IV2"
                         android:layout_alignEnd="@id/IV2"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#FFA07A"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:textSize="23sp"
@@ -198,7 +218,7 @@
                         android:layout_marginTop="90dp"
                         android:textColor="#FFFFFF"
                         android:gravity="right"
-                        android:layout_marginRight="35dp"/>
+                        android:layout_marginRight="40dp"/>
                     <ImageView
                         android:id="@+id/imageView8"
                         android:layout_width="25dp"
@@ -206,6 +226,26 @@
                         android:layout_marginTop="503dp"
                         android:layout_marginLeft="320dp"
                         android:src="@drawable/ic_baseline_local_fire_department_24" />
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="468dp"
+                        android:src="@drawable/graph_bar_svgrepo_com"/>
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="537dp"
+                        android:src="@drawable/ic_baseline_timer_24" />
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="438dp"
+                        android:src="@drawable/img_dumbell"/>
+
 
                     <ImageView
                         android:id="@+id/IV3"
@@ -226,7 +266,7 @@
                         android:layout_alignStart="@id/IV3"
                         android:layout_alignRight="@id/IV3"
                         android:layout_alignEnd="@id/IV3"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#FF6666"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:textSize="23sp"
@@ -256,7 +296,7 @@
                         android:layout_alignRight="@id/IV3"
                         android:layout_alignEnd="@id/IV3"
                         android:layout_marginTop="90dp"
-                        android:layout_marginLeft="35dp"
+                        android:layout_marginLeft="40dp"
                         android:textColor="#FFFFFF"/>
                     <ImageView
                         android:id="@+id/imageView9"
@@ -265,6 +305,26 @@
                         android:layout_marginTop="802dp"
                         android:layout_marginLeft="8dp"
                         android:src="@drawable/ic_baseline_local_fire_department_24" />
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="768dp"
+                        android:src="@drawable/graph_bar_svgrepo_com"/>
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="836dp"
+                        android:src="@drawable/ic_baseline_timer_24" />
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="738dp"
+                        android:src="@drawable/img_dumbell"/>
+
 
                     <ImageView
                         android:id="@+id/IV4"
@@ -285,7 +345,7 @@
                         android:layout_alignStart="@id/IV4"
                         android:layout_alignRight="@id/IV4"
                         android:layout_alignEnd="@id/IV4"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#FFA07A"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:textSize="23sp"
@@ -317,7 +377,7 @@
                         android:layout_marginTop="90dp"
                         android:textColor="#FFFFFF"
                         android:gravity="right"
-                        android:layout_marginRight="35dp"/>
+                        android:layout_marginRight="40dp"/>
                     <ImageView
                         android:id="@+id/imageView10"
                         android:layout_width="25dp"
@@ -325,6 +385,25 @@
                         android:layout_marginTop="1102dp"
                         android:layout_marginLeft="320dp"
                         android:src="@drawable/ic_baseline_local_fire_department_24" />
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="1068dp"
+                        android:src="@drawable/graph_bar_svgrepo_com"/>
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="1136dp"
+                        android:src="@drawable/ic_baseline_timer_24" />
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="1037dp"
+                        android:src="@drawable/img_dumbell"/>
 
 
                 </RelativeLayout>

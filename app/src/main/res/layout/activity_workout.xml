@@ -58,7 +58,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
                 android:paddingTop="70dp"
                 android:paddingBottom="25dp"
                 android:text="CHOOSE YOUR EXERCISES :"

@@ -57,21 +57,22 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:paddingTop="70dp"
-                android:paddingBottom="25dp"
-                android:text="CHOOSE YOUR EXERCISES :"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="TRAINING PLAN"
                 android:textColor="#FFFFFF"
-                android:textSize="23sp"
+                android:textSize="30sp"
                 android:textStyle="italic|bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sweat Your Way to Success"
+                android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:textColor="#FFFFFF"/>
+                android:textSize="15sp"
+                android:textColor="#FFA07A"/>
 
             <ScrollView
                 android:layout_width="wrap_content"
@@ -79,12 +80,9 @@
                 android:layout_gravity="center">
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="200dp"
-                    android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/IV1"
@@ -92,8 +90,51 @@
                         android:layout_height="250dp"
                         android:adjustViewBounds="true"
                         android:scaleType="fitXY"
-                        android:layout_marginTop="100dp"
+                        android:alpha="0.7"
+                        android:layout_marginTop="50dp"
                         android:src="@drawable/img_begg" />
+                    <TextView
+                        android:id="@+id/TVbegg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BEGGINER LEVEL"
+                        android:layout_alignTop="@id/IV1"
+                        android:layout_alignLeft="@id/IV1"
+                        android:layout_alignStart="@id/IV1"
+                        android:layout_alignRight="@id/IV1"
+                        android:layout_alignEnd="@id/IV1"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/TVbegg2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Body Routine"
+                        android:layout_alignTop="@id/IV1"
+                        android:layout_alignLeft="@id/IV1"
+                        android:layout_alignStart="@id/IV1"
+                        android:layout_alignRight="@id/IV1"
+                        android:layout_alignEnd="@id/IV1"
+                        android:layout_marginTop="45dp"
+                        android:gravity="center"
+                        android:textColor="#FFB6C1"/>
+                    <TextView
+                        android:id="@+id/TVbegg3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:text="No Equipment \nLow Impact Exercise \n130 Calories \n20 Minutes \nPush Ups, Plank Crunches etc"
+                        android:layout_alignTop="@id/IV1"
+                        android:layout_alignStart="@id/IV1"
+                        android:layout_alignLeft="@id/IV1"
+                        android:layout_alignRight="@id/IV1"
+                        android:layout_alignEnd="@id/IV1"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="#FFFFFF"/>
 
                     <ImageView
                         android:id="@+id/IV2"
@@ -101,8 +142,52 @@
                         android:layout_height="250dp"
                         android:adjustViewBounds="true"
                         android:scaleType="fitXY"
-                        android:layout_marginTop="30dp"
-                        android:src="@drawable/img_inter" />
+                        android:alpha="0.7"
+                        android:layout_marginTop="350dp"
+                        android:src="@drawable/img_inter"/>
+                    <TextView
+                        android:id="@+id/TVinter1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INTERMEDIATE LEVEL"
+                        android:layout_alignTop="@id/IV2"
+                        android:layout_alignLeft="@id/IV2"
+                        android:layout_alignStart="@id/IV2"
+                        android:layout_alignRight="@id/IV2"
+                        android:layout_alignEnd="@id/IV2"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/TVinter2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upperbody Routine"
+                        android:layout_alignTop="@id/IV2"
+                        android:layout_alignLeft="@id/IV2"
+                        android:layout_alignStart="@id/IV2"
+                        android:layout_alignRight="@id/IV2"
+                        android:layout_alignEnd="@id/IV2"
+                        android:layout_marginTop="45dp"
+                        android:textColor="#FFB6C1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/TVinter3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:text="Basic Equipments\n Strength\n 220 Calories\n 40 Minutes\n Shoulder press, Biceps Curls,\n Tricep Dips etc"
+                        android:layout_alignTop="@id/IV2"
+                        android:layout_alignLeft="@id/IV2"
+                        android:layout_alignStart="@id/IV2"
+                        android:layout_alignRight="@id/IV2"
+                        android:layout_alignEnd="@id/IV2"
+                        android:layout_marginTop="90dp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="right"
+                        android:layout_marginRight="20dp"/>
 
                     <ImageView
                         android:id="@+id/IV3"
@@ -110,8 +195,51 @@
                         android:layout_height="250dp"
                         android:adjustViewBounds="true"
                         android:scaleType="fitXY"
-                        android:layout_marginTop="30dp"
+                        android:alpha="0.7"
+                        android:layout_marginTop="650dp"
                         android:src="@drawable/img_fatloss" />
+                    <TextView
+                        android:id="@+id/TVFat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FAT LOSS"
+                        android:layout_alignTop="@id/IV3"
+                        android:layout_alignLeft="@id/IV3"
+                        android:layout_alignStart="@id/IV3"
+                        android:layout_alignRight="@id/IV3"
+                        android:layout_alignEnd="@id/IV3"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textSize="23sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/TVFat2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cardiovascular Endurance"
+                        android:layout_alignTop="@id/IV3"
+                        android:layout_alignLeft="@id/IV3"
+                        android:layout_alignStart="@id/IV3"
+                        android:layout_alignRight="@id/IV3"
+                        android:layout_alignEnd="@id/IV3"
+                        android:layout_marginTop="45dp"
+                        android:gravity="center"
+                        android:textColor="#FFB6C1"/>
+                    <TextView
+                        android:id="@+id/TVFat3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:text="No Equipment \nCircuit Training \n200-300 Calories \n1 Hour \nJogging, Running, Walking etc"
+                        android:layout_alignTop="@id/IV3"
+                        android:layout_alignLeft="@id/IV3"
+                        android:layout_alignStart="@id/IV3"
+                        android:layout_alignRight="@id/IV3"
+                        android:layout_alignEnd="@id/IV3"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="#FFFFFF"/>
 
                     <ImageView
                         android:id="@+id/IV4"
@@ -119,11 +247,55 @@
                         android:layout_height="250dp"
                         android:adjustViewBounds="true"
                         android:scaleType="fitXY"
-                        android:layout_marginTop="30dp"
+                        android:alpha="0.7"
+                        android:layout_marginTop="950dp"
                         android:src="@drawable/img_exp" />
+                    <TextView
+                        android:id="@+id/TVExp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EXPERT LEVEL"
+                        android:layout_alignTop="@id/IV4"
+                        android:layout_alignLeft="@id/IV4"
+                        android:layout_alignStart="@id/IV4"
+                        android:layout_alignRight="@id/IV4"
+                        android:layout_alignEnd="@id/IV4"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textSize="23sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/TVExp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Resistance Routine"
+                        android:layout_alignTop="@id/IV4"
+                        android:layout_alignLeft="@id/IV4"
+                        android:layout_alignStart="@id/IV4"
+                        android:layout_alignRight="@id/IV4"
+                        android:layout_alignEnd="@id/IV4"
+                        android:layout_marginTop="45dp"
+                        android:textColor="#FFB6C1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/TVExp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:text="Full Equipments\n Strength &amp; Muscle Training\n 450 Calories\n 1 Hour 20 Minutes\n Bench Press, Shoulder Press,\n Deadlift, Squats etc"
+                        android:layout_alignTop="@id/IV4"
+                        android:layout_alignLeft="@id/IV4"
+                        android:layout_alignStart="@id/IV4"
+                        android:layout_alignRight="@id/IV4"
+                        android:layout_alignEnd="@id/IV4"
+                        android:layout_marginTop="90dp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="right"
+                        android:layout_marginRight="20dp"/>
 
 
-                </LinearLayout>
+                </RelativeLayout>
             </ScrollView>
         </LinearLayout>
 

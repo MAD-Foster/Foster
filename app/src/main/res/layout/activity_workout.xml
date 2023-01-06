@@ -126,7 +126,7 @@
                         android:id="@+id/TVbegg1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="BEGGINER LEVEL"
+                        android:text="BEGINNER LEVEL"
                         android:layout_alignTop="@id/IV1"
                         android:layout_alignLeft="@id/IV1"
                         android:layout_alignStart="@id/IV1"

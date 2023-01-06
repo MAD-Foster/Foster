@@ -23,6 +23,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,7 +33,7 @@ import android.widget.ImageView;
 
 import com.example.foster.databinding.ActivityWorkoutBinding;
 
-public class WorkoutActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class WorkoutActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     //    private ActivityWorkoutBinding binding;
     BottomNavigationView bottomNavigationView;
@@ -56,21 +58,25 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        int Beg=R.drawable.img_begg;
-        ImageView imageView=(ImageView)findViewById(R.id.IV1);
-        roundImage(imageView,Beg);
+        int Beg = R.drawable.img_begg;
+        ImageView imageView = (ImageView) findViewById(R.id.IV1);
+        roundImage(imageView, Beg);
+        imageView.setOnClickListener(this);
+        int Inter = R.drawable.img_inter;
+        ImageView imageView1 = (ImageView) findViewById(R.id.IV2);
+        roundImage(imageView1, Inter);
+        imageView1.setOnClickListener(this);
 
-        int Inter=R.drawable.img_inter;
-        ImageView imageView1=(ImageView)findViewById(R.id.IV2);
-        roundImage(imageView1,Inter);
+        int Fat = R.drawable.img_fatloss;
+        ImageView imageView2 = (ImageView) findViewById(R.id.IV3);
+        roundImage(imageView2, Fat);
+        imageView2.setOnClickListener(this);
 
-        int Fat=R.drawable.img_fatloss;
-        ImageView imageView2=(ImageView)findViewById(R.id.IV3);
-        roundImage(imageView2,Fat);
+        int Exp = R.drawable.img_exp;
+        ImageView imageView3 = (ImageView) findViewById(R.id.IV4);
+        roundImage(imageView3, Exp);
+        imageView3.setOnClickListener(this);
 
-        int Exp=R.drawable.img_exp;
-        ImageView imageView3=(ImageView)findViewById(R.id.IV4);
-        roundImage(imageView3,Exp);
     }
 
     @Override
@@ -119,14 +125,56 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
         return true;
     }
 
-    public void roundImage(ImageView mimageView,int i){
-        Bitmap mbitmap=((BitmapDrawable) getResources().getDrawable(i)).getBitmap();
-        Bitmap imageRounded=Bitmap.createBitmap(mbitmap.getWidth(), mbitmap.getHeight(), mbitmap.getConfig());
-        Canvas canvas=new Canvas(imageRounded);
-        Paint mpaint=new Paint();
+    public void roundImage(ImageView mimageView, int i) {
+        Bitmap mbitmap = ((BitmapDrawable) getResources().getDrawable(i)).getBitmap();
+        Bitmap imageRounded = Bitmap.createBitmap(mbitmap.getWidth(), mbitmap.getHeight(), mbitmap.getConfig());
+        Canvas canvas = new Canvas(imageRounded);
+        Paint mpaint = new Paint();
         mpaint.setAntiAlias(true);
         mpaint.setShader(new BitmapShader(mbitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP));
         canvas.drawRoundRect((new RectF(0, 0, mbitmap.getWidth(), mbitmap.getHeight())), 35, 35, mpaint); // Round Image Corner 100 100 100 100
         mimageView.setImageBitmap(imageRounded);
     }
+    public int condition;
+
+    @Override
+    public void onClick(View v) {
+//        Fragment fragmentBeginner = new BeginnerFragment();
+//        Fragment fragmentIntermediate = new IntermediateFragment();
+//        Fragment fragmentExpert = new ExpertFragment();
+//        Fragment fragmentFatLoss = new FatLossFragment();
+
+        switch (v.getId()) {
+            case R.id.IV1:
+                condition = 1;
+                break;
+            case R.id.IV2:
+                condition = 2;
+                break;
+            case R.id.IV3:
+                condition = 3;
+                break;
+            case R.id.IV4:
+                condition = 4;
+                break;
+
+        }
+        System.out.println(condition);
+
+        Intent i = new Intent(WorkoutActivity.this, SpecificExerciseActivity.class);
+        Bundle b=new Bundle();
+        b.putInt("key",condition);
+        i.putExtras(b);
+        startActivity(i);
+
+    }
+
+    private void loadFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//frame_container is your layout name in xml file
+        transaction.replace(R.id.NHFSpecificExercise, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
 }

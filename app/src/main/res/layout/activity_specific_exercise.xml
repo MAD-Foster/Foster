@@ -11,17 +11,19 @@
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        android:src="@drawable/bg_foster"/>
+        android:src="@drawable/bg_foster" />
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/wave_pink"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:src="@drawable/wave_pink"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/NHFWorkoutBottomPart"
+        android:id="@+id/NHFSpecificExercise"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
@@ -33,11 +35,10 @@
         tools:layout="@layout/fragment_beginner">
 
 
-
     </androidx.fragment.app.FragmentContainerView>
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/backButtonASE"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"

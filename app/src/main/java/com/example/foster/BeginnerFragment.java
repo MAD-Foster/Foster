@@ -1,5 +1,6 @@
 package com.example.foster;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -61,4 +62,6 @@ public class BeginnerFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_beginner, container, false);
     }
+
+
 }

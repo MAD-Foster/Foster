@@ -8,12 +8,13 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.foster.WorkoutActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class SpecificExerciseActivity extends AppCompatActivity implements View.OnClickListener {
+public class SpecificExerciseActivity extends AppCompatActivity {
     Fragment fragmentBeginner = new BeginnerFragment();
     Fragment fragmentIntermediate = new IntermediateFragment();
     Fragment fragmentExpert = new ExpertFragment();
@@ -26,7 +27,6 @@ public class SpecificExerciseActivity extends AppCompatActivity implements View.
 
         Bundle b = getIntent().getExtras();
         int condition = b.getInt("key");
-        System.out.println(condition);
         switch (condition) {
             case 1:
                 loadFragment(fragmentBeginner);
@@ -45,17 +45,22 @@ public class SpecificExerciseActivity extends AppCompatActivity implements View.
     }
 
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.backButtonASE:
-                Intent i = new Intent(SpecificExerciseActivity.this, WorkoutActivity.class);
-                startActivity(i);
-                break;
-        }
+//    @Override
+//    public void onClick(View v) {
+//        System.out.println(123);
+//        switch (v.getId()) {
+//            case R.id.backButtonASE:
+//                Intent i = new Intent(SpecificExerciseActivity.this, WorkoutActivity.class);
+//                startActivity(i);
+//                break;
+//        }
+//
+//    }
 
+    public void backButton(View v){
+        Intent i = new Intent(SpecificExerciseActivity.this, WorkoutActivity.class);
+        startActivity(i);
     }
-
     private void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 //frame_container is your layout name in xml file

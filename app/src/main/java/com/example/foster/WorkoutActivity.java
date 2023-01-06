@@ -174,8 +174,6 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
                 break;
 
         }
-        System.out.println(condition);
-
         Intent i = new Intent(WorkoutActivity.this, SpecificExerciseActivity.class);
         Bundle b = new Bundle();
         b.putInt("key", condition);

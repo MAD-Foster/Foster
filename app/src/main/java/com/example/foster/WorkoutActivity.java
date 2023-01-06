@@ -50,10 +50,9 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
         setSupportActionBar(toolbar);
         navigationView = findViewById(R.id.sideNav);
         navigationView.setItemIconTintList(null);
-
+        navigationView.setNavigationItemSelectedListener(this);
 
         drawerLayout = findViewById(R.id.DLWorkout);
-        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -105,21 +104,32 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Intent i;
         if (item.getItemId() == R.id.DestHome) {
-
+            i = new Intent(WorkoutActivity.this, MainActivity.class);
+            startActivity(i);
         } else if (item.getItemId() == R.id.DestAboutApp) {
-
+//            i = new Intent(WorkoutActivity.this, AboutappActivity.class);
+//            startActivity(i);
         } else if (item.getItemId() == R.id.DestLogout) {
+//            i=new Intent(WorkoutActivity.this,LogoutActivity.class);
+//            startActivity(i);
         } else if (item.getItemId() == R.id.DestMusicPage) {
+            i=new Intent(WorkoutActivity.this,MusicActivity.class);
+            startActivity(i);
+
         } else if (item.getItemId() == R.id.DestSettings) {
+            i=new Intent(WorkoutActivity.this,SettingsActivity.class);
+            startActivity(i);
         } else if (item.getItemId() == R.id.DestWorkoutPage) {
-            Intent i = new Intent(WorkoutActivity.this, WorkoutActivity.class);
+           i = new Intent(WorkoutActivity.this, WorkoutActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestStepsPage) {
-
+//            i = new Intent(WorkoutActivity.this, StepsActivity.class);
+//            startActivity(i);
         }
 
-        drawerLayout = findViewById(R.id.DLMain);
+        drawerLayout = findViewById(R.id.DLWorkout);
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
@@ -135,6 +145,7 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
         canvas.drawRoundRect((new RectF(0, 0, mbitmap.getWidth(), mbitmap.getHeight())), 35, 35, mpaint); // Round Image Corner 100 100 100 100
         mimageView.setImageBitmap(imageRounded);
     }
+
     public int condition;
 
     @Override
@@ -144,6 +155,7 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
 //        Fragment fragmentExpert = new ExpertFragment();
 //        Fragment fragmentFatLoss = new FatLossFragment();
 
+        FloatingActionButton fab = findViewById(R.id.fab);
         switch (v.getId()) {
             case R.id.IV1:
                 condition = 1;
@@ -157,13 +169,16 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
             case R.id.IV4:
                 condition = 4;
                 break;
+            case R.id.fab:
+                Snackbar.make(v, "blabla", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                break;
 
         }
         System.out.println(condition);
 
         Intent i = new Intent(WorkoutActivity.this, SpecificExerciseActivity.class);
-        Bundle b=new Bundle();
-        b.putInt("key",condition);
+        Bundle b = new Bundle();
+        b.putInt("key", condition);
         i.putExtras(b);
         startActivity(i);
 

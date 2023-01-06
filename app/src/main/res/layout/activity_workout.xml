@@ -8,15 +8,7 @@
     tools:context=".WorkoutActivity">
 
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/sideNav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:background="@color/dark_maroon"
-        app:headerLayout="@layout/nav_header"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/menu_side" />
+
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -444,5 +436,13 @@
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/sideNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@color/dark_maroon"
+        app:headerLayout="@layout/nav_header"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_side" />
 </androidx.drawerlayout.widget.DrawerLayout>

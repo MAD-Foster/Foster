@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BeginnerFragment">
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:src="@drawable/bg_foster" />-->
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:alpha="0.9"
+                android:src="@drawable/img_begg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="84dp"
+                android:text="MUSCLE BUILDINGS"
+                android:textColor="#FF6666"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="277dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Ultimate 30 Minutes Beginner's Guide"
+                android:textColor="@color/white"
+                android:textSize="29sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.694" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/graph_bar_svgrepo_com"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_baseline_local_fire_department_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="53dp"
+                android:text="Beginner"
+                android:textColor="#FFB6C1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.922" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="180dp"
+                android:text="130kcal"
+                android:textColor="#FFB6C1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.922" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday1" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Jumping jacks, Push-ups, Lunges, Plank, Bicycle crunches"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/GO_beginner_day1"
+                        android:layout_width="wrap_content"
+                        android:onClick="goButton"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday2" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Squats, Triceps dips, Burpees, Side plank, High knees"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/GO_beginner_day2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday3" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Box jumps, Step-ups, Russian twists, Leg raises"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/GO_beginner_day3"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday4" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_marginTop="20dp"
+                        android:text="Push-ups, Squats, Sit-ups, Mountain climbers"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/GO_beginner_day4"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday5" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_marginTop="20dp"
+                        android:text="Plyometric jumps, Reverse crunches, Heel touches, Leg raises"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/GO_beginner_day5"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday6" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Jumping jacks, Push-ups, Lunges, Plank ups, Side plank dips"
+
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/GO_beginner_day6"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday7" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Bicycle crunches, Lunges, Russian twists, Triceps Dips, Push-ups "
+
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/GO_beginner_day7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

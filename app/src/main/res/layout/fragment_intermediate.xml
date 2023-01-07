@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntermediateFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_inter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="84dp"
+                android:text="STRENGTH &amp; CONDITIONING"
+                android:textColor="#FF6666"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="277dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="125dp"
+                android:text="Intermediate Upper Body Burn"
+                android:textColor="@color/white"
+                android:gravity="right"
+                android:textSize="29sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.683" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/graph_bar_svgrepo_com"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_baseline_local_fire_department_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:text="Intermediate"
+                android:textColor="#FFB6C1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.922" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="350dp"
+                android:text="220 kcal"
+                android:textColor="#FFB6C1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.922" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday1" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Push-ups, Bench press, Lat pulldowns, Tricep dips, Bicep curls"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday2" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Squats, Lunges, Leg press, Leg curls, Calf raises"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday3" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Burpees, Box jumps, High knees, Mountain climbers, Tuck jumps"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday4" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_marginTop="20dp"
+                        android:text="Deadlifts, Step-ups, Glute bridges, Hip thrusts, Plank"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday5" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_marginTop="20dp"
+                        android:text="Push-ups, Bench press, Lat pulldowns, Tricep dips, Bicep curls"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday6" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Squats, Lunges, Leg press, Leg curls, Calf raises"
+
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/groupedday7" />
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Burpees, Box jumps, High knees, Mountain climbers, Tuck jumps"
+
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/go__" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

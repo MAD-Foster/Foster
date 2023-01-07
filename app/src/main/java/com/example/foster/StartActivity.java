@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -17,6 +18,15 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        ExerciseEnum day;
+        int length=ExerciseEnum.values().length;
+        for(ExerciseEnum a:ExerciseEnum.values()){
+            for(String b:a.getExercises().keySet()){
+                System.out.println(a+" :"+b);
+
+            }
+        }
         Timer timer =new Timer();
         timer.schedule(new TimerTask() {
             @Override

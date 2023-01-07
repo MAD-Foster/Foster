@@ -8,16 +8,7 @@
     tools:context=".MainActivity">
 
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/sideNav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
-        app:itemTextColor="@color/white"
-        android:background="@color/dark_maroon"
-        app:menu="@menu/menu_side"
-        />
+
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
@@ -98,5 +89,15 @@
 <!--        app:defaultNavHost="true"-->
 <!--        app:navGraph="@navigation/navigation_foster" />-->
 
-
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/sideNavMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@null"
+        android:background="@color/dark_maroon"
+        app:menu="@menu/menu_side"
+        />
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -59,6 +60,10 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.registerUser:
                 registerUser();
+                break;
+
+            case R.id.loginNow:
+                startActivity(new Intent(this, LoginActivity.class));
                 break;
         }
 

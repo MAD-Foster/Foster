@@ -1,5 +1,6 @@
 package com.example.foster;
 
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -60,11 +66,59 @@ public class StartingWorkoutFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_starting_workout, container, false);
     }
 
-//    public HashMap<String,int []> changeList(){
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+//        ExerciseObject exerciseObject=new ExerciseObject();
+//        exerciseObject.textView=view.findViewById(R.id.TVFirstExercise);
+//        exerciseObject.imageView=view.findViewById(R.id.IVFirstExercise);
+        firstTV = view.findViewById(R.id.TVFirstExercise);
+        secondTV = view.findViewById(R.id.TVSecondExercise);
+        thirdTV = view.findViewById(R.id.TVThirdExercise);
+        fourthTV = view.findViewById(R.id.TVFourthExercise);
+        fifthTV = view.findViewById(R.id.TVFifthExercise);
+        firstIV = view.findViewById(R.id.IVFirstExercise);
+        secondIV = view.findViewById(R.id.IVSecondExercise);
+        thirdIV = view.findViewById(R.id.IVThirdExercise);
+        fourthIV = view.findViewById(R.id.IVFourthExercise);
+        fifthIV = view.findViewById(R.id.IVFifthExercise);
+
+        firstTV.setText("");
+
+    }
+
+
+    private TextView firstTV,
+            secondTV,
+            thirdTV,
+            fourthTV,
+            fifthTV;
+    private ImageView firstIV,
+            secondIV,
+            thirdIV,
+            fourthIV,
+            fifthIV;
+//    HashMap<String,> hashMap = new HashMap<>();
+
+    TextView[] tvArr = {firstTV,secondTV,thirdTV,fourthTV,fifthTV};
+    ImageView[] ivArr = {firstIV,secondIV,thirdIV,fourthIV,fifthIV};
+
+//    public void setExerciseTextAndImage() {
 //
+//        ExerciseObject exerciseObject = new ExerciseObject();
+//        exerciseObject.textView = findViewById()
+//        hashMap.put("first", )
 //    }
+}
+
+class ExerciseObject {
+    TextView textView;
+    ImageView imageView;
+
+
 }

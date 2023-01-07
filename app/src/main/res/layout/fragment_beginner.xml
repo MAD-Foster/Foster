@@ -134,7 +134,9 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_beginner_day1"
                         android:layout_width="wrap_content"
+                        android:onClick="goButton"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="30dp"
@@ -166,6 +168,7 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_beginner_day2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
@@ -198,6 +201,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_beginner_day3"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
@@ -231,6 +236,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_beginner_day4"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
@@ -264,6 +271,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_beginner_day5"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
@@ -296,6 +305,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_beginner_day6"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
@@ -327,6 +338,7 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_beginner_day7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"

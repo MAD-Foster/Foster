@@ -1,7 +1,6 @@
 package com.example.foster;
 
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -57,15 +56,45 @@ public class SpecificExerciseActivity extends AppCompatActivity {
 //
 //    }
 
-    public void backButton(View v){
+    public void backButton(View v) {
+
         Intent i = new Intent(SpecificExerciseActivity.this, WorkoutActivity.class);
         startActivity(i);
     }
-    private void loadFragment(Fragment fragment) {
+
+    @SuppressLint("NonConstantResourceId")
+    public void goButton(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.GO_beginner_day1:
+                break;
+            case R.id.GO_beginner_day2:
+                break;
+            case R.id.GO_beginner_day3:
+                break;
+            case R.id.GO_beginner_day4:
+                break;
+            case R.id.GO_beginner_day5:
+                break;
+            case R.id.GO_beginner_day6:
+                break;
+            case R.id.GO_beginner_day7:
+                break;
+        }
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.NHFSpecificExercise, new StartingWorkoutFragment());
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+
+
+    public void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 //frame_container is your layout name in xml file
         transaction.replace(R.id.NHFSpecificExercise, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
 }

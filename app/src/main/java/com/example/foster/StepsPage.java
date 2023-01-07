@@ -13,9 +13,19 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Calendar;
+import java.util.Date;
 
 public class StepsPage extends AppCompatActivity implements SensorEventListener {
-    private TextView textViewStepCounter, textViewStepDetector;
+    private TextView textViewStepCounter, textViewStepDetector, textViewTotalStepsCounter;
     private SensorManager sensorManager;
     private Sensor mStepCounter;
     private boolean isCounterSensorPresent;
@@ -37,6 +47,7 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         textViewStepCounter = findViewById(R.id.stepCounter);
         textViewStepDetector = findViewById(R.id.stepDetector);
+        textViewTotalStepsCounter = findViewById(R.id.totalStepCounter);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
@@ -47,6 +58,37 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener 
             textViewStepCounter.setText("Counter Sensor is not Present");
             isCounterSensorPresent = false;
         }
+
+
+        // create a new database reference
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("steps");
+
+        // create a new child location for the current day
+        String key = ref.push().getKey();
+        DatabaseReference dayRef = ref.child(key);
+
+        // store the step count data for the current day
+        dayRef.setValue(stepCount);
+
+        // attach a value event listener to the reference
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // get the step count data from the snapshot
+                int stepCount = dataSnapshot.getValue(Integer.class);
+
+                // update the UI with the step count
+                textViewTotalStepsCounter.setText(String.valueOf(stepCount));
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
     }
 
     @Override
@@ -54,6 +96,22 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener 
         if(sensorEvent.sensor == mStepCounter){
             stepCount = (int) sensorEvent.values[0];
             textViewStepCounter.setText(String.valueOf(stepCount));
+            resetStepsCount();
+        }
+    }
+
+    private void resetStepsCount() {
+        Calendar now = Calendar.getInstance();
+        Calendar lastReset = Calendar.getInstance();
+
+        // Use the current step count as the last reset time
+        lastReset.setTime(new Date(stepCount));
+
+        if (now.get(Calendar.YEAR) > lastReset.get(Calendar.YEAR) ||
+                now.get(Calendar.MONTH) > lastReset.get(Calendar.MONTH) ||
+                now.get(Calendar.DAY_OF_MONTH) > lastReset.get(Calendar.DAY_OF_MONTH)) {
+            // If it's a new day, reset the step count
+            stepCount = 0;
         }
     }
 
@@ -77,4 +135,8 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener 
         sensorManager.unregisterListener(this, mStepCounter);
 
     }
+
+
+
+
 }

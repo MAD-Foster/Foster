@@ -19,10 +19,12 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 
 public class StepsPage extends AppCompatActivity implements SensorEventListener {
     private TextView textViewStepCounter, textViewStepDetector, textViewTotalStepsCounter;
@@ -75,10 +77,10 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // get the step count data from the snapshot
-                int stepCount = dataSnapshot.getValue(Integer.class);
+                HashMap<String, Integer> stepCountMap = dataSnapshot.getValue(new GenericTypeIndicator<HashMap<String, Integer>>(){});
 
                 // update the UI with the step count
-                textViewTotalStepsCounter.setText(String.valueOf(stepCount));
+                textViewTotalStepsCounter.setText(String.valueOf(stepCountMap.get("stepCountKey")));
             }
 
             @Override

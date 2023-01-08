@@ -61,10 +61,12 @@
 
         <ImageView
             android:id="@+id/IVFirstExercise"
-            android:layout_width="82dp"
-            android:layout_height="85dp"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
             android:layout_marginStart="28dp"
-            android:src="@drawable/muscle_flex_outline_svgrepo_com"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_pushup"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -73,7 +75,7 @@
             android:id="@+id/TVFirstExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="44dp"
             android:text="Push up"
             android:textSize="20sp"
@@ -85,7 +87,7 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="74dp"
             android:text="5 Minutes"
             android:textSize="14sp"
@@ -125,11 +127,13 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/IVSecondExercise"
-            android:layout_width="82dp"
-            android:layout_height="85dp"
+            android:id="@+id/ISecondExercise"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
             android:layout_marginStart="28dp"
-            android:src="@drawable/muscle_flex_outline_svgrepo_com"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_pushup"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -138,7 +142,7 @@
             android:id="@+id/TVSecondExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="44dp"
             android:text="Push up"
             android:textSize="20sp"
@@ -150,7 +154,7 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="74dp"
             android:text="5 Minutes"
             android:textSize="14sp"
@@ -191,10 +195,12 @@
 
         <ImageView
             android:id="@+id/IVThirdExercise"
-            android:layout_width="82dp"
-            android:layout_height="85dp"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
             android:layout_marginStart="28dp"
-            android:src="@drawable/muscle_flex_outline_svgrepo_com"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_pushup"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -203,7 +209,7 @@
             android:id="@+id/TVThirdExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="44dp"
             android:text="Push up"
             android:textSize="20sp"
@@ -215,7 +221,7 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="74dp"
             android:text="5 Minutes"
             android:textSize="14sp"
@@ -256,10 +262,12 @@
 
         <ImageView
             android:id="@+id/IVFourthExercise"
-            android:layout_width="82dp"
-            android:layout_height="85dp"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
             android:layout_marginStart="28dp"
-            android:src="@drawable/muscle_flex_outline_svgrepo_com"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_pushup"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -268,7 +276,7 @@
             android:id="@+id/TVFourthExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="44dp"
             android:text="Push up"
             android:textSize="20sp"
@@ -277,10 +285,10 @@
             android:textColor="#FFFFFF"/>
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="74dp"
             android:text="5 Minutes"
             android:textSize="14sp"
@@ -321,10 +329,12 @@
 
         <ImageView
             android:id="@+id/IVFifthExercise"
-            android:layout_width="82dp"
-            android:layout_height="85dp"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
             android:layout_marginStart="28dp"
-            android:src="@drawable/muscle_flex_outline_svgrepo_com"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_pushup"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -333,7 +343,7 @@
             android:id="@+id/TVFifthExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="44dp"
             android:text="Push up"
             android:textSize="20sp"
@@ -342,10 +352,10 @@
             android:textColor="#FFFFFF"/>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="74dp"
             android:text="5 Minutes"
             android:textSize="14sp"

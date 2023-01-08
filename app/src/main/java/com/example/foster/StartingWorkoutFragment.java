@@ -115,6 +115,36 @@ public class StartingWorkoutFragment extends Fragment {
         ImageView[] ivArr = {firstIV, secondIV, thirdIV, fourthIV, fifthIV};
         //    BEGINNER_DAY_1("Jumping jacks", " Push-ups", "Lunges", " Plank", "Bicycle crunches"),
         int[] beginnerDay1 = {R.drawable.img_jumpingjack, R.drawable.img_pushup, R.drawable.img_lunges, R.drawable.img_plank, R.drawable.img_bcrucnhes};
+        int[] beginnerDay2 = {R.drawable.img_squat, R.drawable.img_tridips, R.drawable.img_burpees, R.drawable.img_sideplank, R.drawable.img_highknees};
+        int[] beginnerDay3 = {R.drawable.img_boxjumps, R.drawable.img_stepups, R.drawable.img_russiantwist, R.drawable.img_legraises}; //4
+        int[] beginnerDay4 = {R.drawable.img_pushup, R.drawable.img_squat, R.drawable.img_situps, R.drawable.img_mountain}; //4
+        int[] beginnerDay5 = {R.drawable.img_plyojumps, R.drawable.img_revcrunches, R.drawable.img_heeltouchs, R.drawable.img_legraises}; //4
+        int[] beginnerDay6 = {R.drawable.img_jumpingjack, R.drawable.img_pushup, R.drawable.img_lunges, R.drawable.img_plank, R.drawable.img_sideplank};
+        int[] beginnerDay7 = {R.drawable.img_bcrucnhes, R.drawable.img_lunges, R.drawable.img_russiantwist, R.drawable.img_tridips, R.drawable.img_pushup};
+
+        int[] intermediateDay1 = {R.drawable.img_pushup, R.drawable.img_benchpress, R.drawable.img_latpulls, R.drawable.img_tridips, R.drawable.img_bicepcurls};
+        int[] intermediateDay2 = {R.drawable.img_squat, R.drawable.img_lunges, R.drawable.img_legpress, R.drawable.img_legcurls, R.drawable.img_calfraises};
+        int[] intermediateDay3 = {R.drawable.img_burpees, R.drawable.img_boxjumps, R.drawable.img_highknees, R.drawable.img_mountain, R.drawable.img_tuckjumps};
+        int[] intermediateDay4 = {R.drawable.img_deadlifts, R.drawable.img_stepups, R.drawable.img_glutebridges, R.drawable.img_hipthrusts, R.drawable.img_plank};
+        int[] intermediateDay5 = {R.drawable.img_pushup, R.drawable.img_benchpress, R.drawable.img_latpulls, R.drawable.img_tridips, R.drawable.img_bicepcurls};
+        int[] intermediateDay6 = {R.drawable.img_squat, R.drawable.img_lunges, R.drawable.img_legpress, R.drawable.img_legcurls, R.drawable.img_calfraises};
+        int[] intermediateDay7 = {R.drawable.img_burpees, R.drawable.img_boxjumps, R.drawable.img_highknees, R.drawable.img_mountain, R.drawable.img_tuckjumps};
+
+        int[] fatlossDay1 = {R.drawable.img_jumpingjack, R.drawable.img_highknees, R.drawable.img_buttkicks, R.drawable.img_plankjacks, R.drawable.img_sideshuffles};
+        int[] fatlossDay2 = {R.drawable.img_mountain, R.drawable.img_squatjumps, R.drawable.img_lunges, R.drawable.img_skaters, R.drawable.img_burpees};
+        int[] fatlossDay3 = {R.drawable.img_tuckjumps, R.drawable.img_boxjumps, R.drawable.img_jumpingjack, R.drawable.img_jumpropes, R.drawable.img_buttkicks};
+        int[] fatlossDay4 = {R.drawable.img_highknees, R.drawable.img_jumpingjack, R.drawable.img_powerskips, R.drawable.img_plankjacks, R.drawable.img_sideshuffles};
+        int[] fatlossDay5 = {R.drawable.img_squatjumps, R.drawable.img_lunges, R.drawable.img_mountain, R.drawable.img_skaters, R.drawable.img_burpees};
+        int[] fatlossDay6 = {R.drawable.img_boxjumps, R.drawable.img_tuckjumps, R.drawable.img_jumpingjack, R.drawable.img_jumpropes, R.drawable.img_buttkicks};
+        int[] fatlossDay7 = {R.drawable.img_highknees, R.drawable.img_jumpingjack, R.drawable.img_powerskips, R.drawable.img_plankjacks, R.drawable.img_sideshuffles};
+
+        int[] experDay1 = {R.drawable.img_plyopushups, R.drawable.img_benchpress, R.drawable.img_latpulls, R.drawable.img_tridips, R.drawable.img_bicepcurls};
+        int[] experDay2 = {R.drawable.img_squat, R.drawable.img_lunges, R.drawable.img_legpress, R.drawable.img_legcurls, R.drawable.img_legraises};
+        int[] experDay3 = {R.drawable.img_burpees, R.drawable.img_boxjumps, R.drawable.img_highknees, R.drawable.img_mountain, R.drawable.img_tuckjumps};
+        int[] experDay4 = {R.drawable.img_deadlifts, R.drawable.img_stepups, R.drawable.img_glutebridges, R.drawable.img_hipthrusts, R.drawable.img_plank};
+        int[] experDay5 = {R.drawable.img_plyopushups, R.drawable.img_benchpress, R.drawable.img_latpulls, R.drawable.img_tridips, R.drawable.img_bicepcurls};
+        int[] experDay6 = {R.drawable.img_squat, R.drawable.img_lunges, R.drawable.img_legpress, R.drawable.img_legcurls, R.drawable.img_legraises};
+        int[] experDay7 = {R.drawable.img_burpees, R.drawable.img_boxjumps, R.drawable.img_highknees, R.drawable.img_mountain, R.drawable.img_tuckjumps};
         Object[] array;
 
         Map<String, int[]> exerciseImage = new HashMap<>();

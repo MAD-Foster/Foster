@@ -123,9 +123,9 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener 
     @Override
     protected void onResume() {
         super.onResume();
-        if(sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null);
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null) {
             sensorManager.registerListener(this, mStepCounter, SensorManager.SENSOR_DELAY_NORMAL);
-
+        }
     }
 
     @Override

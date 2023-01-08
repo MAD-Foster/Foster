@@ -138,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:onClick="goButton"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -171,7 +171,7 @@
                         android:id="@+id/GO_beginner_day2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -205,7 +205,7 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -240,7 +240,7 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -275,7 +275,7 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -309,7 +309,7 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -341,7 +341,7 @@
                         android:id="@+id/GO_beginner_day7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 

@@ -30,7 +30,7 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="230dp"
+                android:layout_marginStart="220dp"
                 android:layout_marginTop="84dp"
                 android:text="HIIT and RESISTANCE"
                 android:textColor="#FF6666"
@@ -42,7 +42,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="277dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="125dp"
+                android:layout_marginStart="115dp"
                 android:text="Expert Full-Body\nBurn"
                 android:textColor="@color/white"
                 android:gravity="right"
@@ -65,7 +65,7 @@
                 android:id="@+id/imageView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="320dp"
+                android:layout_marginStart="310dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/ic_baseline_local_fire_department_24"
                 app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="350dp"
+                android:layout_marginStart="335dp"
                 android:text="450 kcal"
                 android:textColor="#FFB6C1"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -130,7 +130,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -162,7 +162,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -194,7 +194,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -227,7 +227,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -260,7 +260,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -292,7 +292,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -323,7 +323,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 

@@ -129,7 +129,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -161,7 +161,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -193,7 +193,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -226,7 +226,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -259,7 +259,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -291,7 +291,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 
@@ -322,7 +322,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/go__" />
 

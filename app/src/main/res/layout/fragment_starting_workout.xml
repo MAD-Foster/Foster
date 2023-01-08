@@ -52,7 +52,14 @@
             android:layout_gravity="center_horizontal"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:layout_gravity="center">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -123,7 +130,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="150dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -190,7 +197,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="270dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -257,7 +264,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="390dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -324,7 +331,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="510dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -388,6 +395,9 @@
             android:textColor="#FFFFFF"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+    </ScrollView>
+
 
 </LinearLayout>
 

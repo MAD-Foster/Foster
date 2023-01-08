@@ -127,6 +127,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_fatloss_day1"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -159,6 +161,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_fatloss_day2"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -191,6 +195,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_fatloss_day3"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -224,6 +230,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_fatloss_day4"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -257,6 +265,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_fatloss_day5"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -289,6 +299,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_fatloss_day6"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -320,6 +332,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_fatloss_day7"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"

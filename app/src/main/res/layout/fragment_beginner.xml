@@ -135,11 +135,11 @@
 
                     <ImageView
                         android:id="@+id/GO_beginner_day1"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
-                        android:onClick="goButton"
                         android:src="@drawable/go__" />
 
 
@@ -169,6 +169,7 @@
 
                     <ImageView
                         android:id="@+id/GO_beginner_day2"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -237,7 +238,7 @@
 
                     <ImageView
                         android:id="@+id/GO_beginner_day4"
-
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -272,7 +273,7 @@
 
                     <ImageView
                         android:id="@+id/GO_beginner_day5"
-
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -306,7 +307,7 @@
 
                     <ImageView
                         android:id="@+id/GO_beginner_day6"
-
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -339,6 +340,7 @@
 
                     <ImageView
                         android:id="@+id/GO_beginner_day7"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"

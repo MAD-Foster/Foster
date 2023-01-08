@@ -61,6 +61,7 @@ public class SpecificExerciseActivity extends AppCompatActivity {
         Intent i = new Intent(SpecificExerciseActivity.this, WorkoutActivity.class);
         startActivity(i);
     }
+
     String stringCondition;
 
     public void goButton(View v) {
@@ -87,8 +88,71 @@ public class SpecificExerciseActivity extends AppCompatActivity {
             case R.id.GO_beginner_day7:
                 stringCondition = "beginner_day7";
                 break;
+            //@@@@@@@@@@@@@@@@@@@@@@@@@
             case R.id.GO_intermediate_day1:
-                stringCondition = "beginner_day7";
+                stringCondition = "intermediate_day1";
+                break;
+            case R.id.GO_intermediate_day2:
+                stringCondition = "intermediate_day2";
+                break;
+            case R.id.GO_intermediate_day3:
+                stringCondition = "intermediate_day3";
+                break;
+            case R.id.GO_intermediate_day4:
+                stringCondition = "intermediate_day4";
+                break;
+            case R.id.GO_intermediate_day5:
+                stringCondition = "intermediate_day5";
+                break;
+            case R.id.GO_intermediate_day6:
+                stringCondition = "intermediate_day6";
+                break;
+            case R.id.GO_intermediate_day7:
+                stringCondition = "intermediate_day7";
+                break;
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@
+            case R.id.GO_expert_day1:
+                stringCondition = "expert_day1";
+                break;
+            case R.id.GO_expert_day2:
+                stringCondition = "expert_day2";
+                break;
+            case R.id.GO_expert_day3:
+                stringCondition = "expert_day3";
+                break;
+            case R.id.GO_expert_day4:
+                stringCondition = "expert_day4";
+                break;
+            case R.id.GO_expert_day5:
+                stringCondition = "expert_day5";
+                break;
+            case R.id.GO_expert_day6:
+                stringCondition = "expert_day6";
+                break;
+            case R.id.GO_expert_day7:
+                stringCondition = "expert_day7";
+                break;
+                //@@@@@@@@@@@@@@@@@@@
+            case R.id.GO_fatloss_day1:
+                stringCondition = "fatloss_day1";
+                break;
+            case R.id.GO_fatloss_day2:
+                stringCondition = "fatloss_day2";
+                break;
+            case R.id.GO_fatloss_day3:
+                stringCondition = "fatloss_day3";
+                break;
+            case R.id.GO_fatloss_day4:
+                stringCondition = "fatloss_day4";
+                break;
+            case R.id.GO_fatloss_day5:
+                stringCondition = "fatloss_day5";
+                break;
+            case R.id.GO_fatloss_day6:
+                stringCondition = "fatloss_day6";
+                break;
+            case R.id.GO_fatloss_day7:
+                stringCondition = "fatloss_day7";
                 break;
             default:
                 stringCondition = "beginner_day7";
@@ -105,7 +169,7 @@ public class SpecificExerciseActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-    public String getCondition(){
+    public String getCondition() {
         return this.stringCondition;
     }
 

@@ -229,6 +229,7 @@ public class StartingWorkoutFragment extends Fragment {
         }
         if (ivArr.length > chosenExerciseMap.size()) {
             ivArr[4].setVisibility(View.GONE);
+            tvArr[4].setVisibility(View.GONE);
             tv5min.setVisibility(View.GONE);
             tvStart.setVisibility(View.GONE);
             tvSets.setVisibility(View.GONE);

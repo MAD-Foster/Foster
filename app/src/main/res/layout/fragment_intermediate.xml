@@ -127,6 +127,8 @@
                         android:textColor="@color/white" />
 
                     <ImageView
+                        android:id="@+id/GO_intermediate_day1"
+                        android:onClick="goButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"

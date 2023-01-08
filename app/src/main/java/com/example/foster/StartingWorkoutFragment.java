@@ -93,10 +93,15 @@ public class StartingWorkoutFragment extends Fragment {
         thirdIV = view.findViewById(R.id.IVThirdExercise);
         fourthIV = view.findViewById(R.id.IVFourthExercise);
         fifthIV = view.findViewById(R.id.IVFifthExercise);
+
+        tv5min = view.findViewById(R.id.TV5MinFifthExercise);
+        tvSets = view.findViewById(R.id.TVSetFifthExercise);
+        tvStart = view.findViewById(R.id.TVStartFifthExercise);
         setExerciseTextAndImage();
 
     }
 
+    private TextView tv5min, tvStart, tvSets;
     private TextView firstTV,
             secondTV,
             thirdTV,
@@ -113,8 +118,9 @@ public class StartingWorkoutFragment extends Fragment {
     public void setExerciseTextAndImage() {
         TextView[] tvArr = {firstTV, secondTV, thirdTV, fourthTV, fifthTV};
         ImageView[] ivArr = {firstIV, secondIV, thirdIV, fourthIV, fifthIV};
-        //    BEGINNER_DAY_1("Jumping jacks", " Push-ups", "Lunges", " Plank", "Bicycle crunches"),
+
         int[] beginnerDay1 = {R.drawable.img_jumpingjack, R.drawable.img_pushup, R.drawable.img_lunges, R.drawable.img_plank, R.drawable.img_bcrucnhes};
+
         int[] beginnerDay2 = {R.drawable.img_squat, R.drawable.img_tridips, R.drawable.img_burpees, R.drawable.img_sideplank, R.drawable.img_highknees};
         int[] beginnerDay3 = {R.drawable.img_boxjumps, R.drawable.img_stepups, R.drawable.img_russiantwist, R.drawable.img_legraises}; //4
         int[] beginnerDay4 = {R.drawable.img_pushup, R.drawable.img_squat, R.drawable.img_situps, R.drawable.img_mountain}; //4
@@ -138,16 +144,45 @@ public class StartingWorkoutFragment extends Fragment {
         int[] fatlossDay6 = {R.drawable.img_boxjumps, R.drawable.img_tuckjumps, R.drawable.img_jumpingjack, R.drawable.img_jumpropes, R.drawable.img_buttkicks};
         int[] fatlossDay7 = {R.drawable.img_highknees, R.drawable.img_jumpingjack, R.drawable.img_powerskips, R.drawable.img_plankjacks, R.drawable.img_sideshuffles};
 
-        int[] experDay1 = {R.drawable.img_plyopushups, R.drawable.img_benchpress, R.drawable.img_latpulls, R.drawable.img_tridips, R.drawable.img_bicepcurls};
-        int[] experDay2 = {R.drawable.img_squat, R.drawable.img_lunges, R.drawable.img_legpress, R.drawable.img_legcurls, R.drawable.img_legraises};
-        int[] experDay3 = {R.drawable.img_burpees, R.drawable.img_boxjumps, R.drawable.img_highknees, R.drawable.img_mountain, R.drawable.img_tuckjumps};
-        int[] experDay4 = {R.drawable.img_deadlifts, R.drawable.img_stepups, R.drawable.img_glutebridges, R.drawable.img_hipthrusts, R.drawable.img_plank};
-        int[] experDay5 = {R.drawable.img_plyopushups, R.drawable.img_benchpress, R.drawable.img_latpulls, R.drawable.img_tridips, R.drawable.img_bicepcurls};
-        int[] experDay6 = {R.drawable.img_squat, R.drawable.img_lunges, R.drawable.img_legpress, R.drawable.img_legcurls, R.drawable.img_legraises};
-        int[] experDay7 = {R.drawable.img_burpees, R.drawable.img_boxjumps, R.drawable.img_highknees, R.drawable.img_mountain, R.drawable.img_tuckjumps};
-        Object[] array;
+        int[] expertDay1 = {R.drawable.img_plyopushups, R.drawable.img_benchpress, R.drawable.img_latpulls, R.drawable.img_tridips, R.drawable.img_bicepcurls};
+        int[] expertDay2 = {R.drawable.img_squat, R.drawable.img_lunges, R.drawable.img_legpress, R.drawable.img_legcurls, R.drawable.img_legraises};
+        int[] expertDay3 = {R.drawable.img_burpees, R.drawable.img_boxjumps, R.drawable.img_highknees, R.drawable.img_mountain, R.drawable.img_tuckjumps};
+        int[] expertDay4 = {R.drawable.img_deadlifts, R.drawable.img_stepups, R.drawable.img_glutebridges, R.drawable.img_hipthrusts, R.drawable.img_plank};
+        int[] expertDay5 = {R.drawable.img_plyopushups, R.drawable.img_benchpress, R.drawable.img_latpulls, R.drawable.img_tridips, R.drawable.img_bicepcurls};
+        int[] expertDay6 = {R.drawable.img_squat, R.drawable.img_lunges, R.drawable.img_legpress, R.drawable.img_legcurls, R.drawable.img_legraises};
+        int[] expertDay7 = {R.drawable.img_burpees, R.drawable.img_boxjumps, R.drawable.img_highknees, R.drawable.img_mountain, R.drawable.img_tuckjumps};
 
-        Map<String, int[]> exerciseImage = new HashMap<>();
+        Object[] arrayText;
+        Object[] arrayImage;
+        LinkedHashMap<String, int[]> exerciseImage = new LinkedHashMap<>();
+        exerciseImage.put("beginner_day1", beginnerDay1);
+        exerciseImage.put("beginner_day2", beginnerDay2);
+        exerciseImage.put("beginner_day3", beginnerDay3);
+        exerciseImage.put("beginner_day4", beginnerDay4);
+        exerciseImage.put("beginner_day5", beginnerDay5);
+        exerciseImage.put("beginner_day6", beginnerDay6);
+        exerciseImage.put("beginner_day7", beginnerDay7);
+        exerciseImage.put("intermediate_day1", intermediateDay1);
+        exerciseImage.put("intermediate_day2", intermediateDay2);
+        exerciseImage.put("intermediate_day3", intermediateDay3);
+        exerciseImage.put("intermediate_day4", intermediateDay4);
+        exerciseImage.put("intermediate_day5", intermediateDay5);
+        exerciseImage.put("intermediate_day6", intermediateDay6);
+        exerciseImage.put("intermediate_day7", intermediateDay7);
+        exerciseImage.put("expert_day1", expertDay1);
+        exerciseImage.put("expert_day2", expertDay2);
+        exerciseImage.put("expert_day3", expertDay3);
+        exerciseImage.put("expert_day4", expertDay4);
+        exerciseImage.put("expert_day5", expertDay5);
+        exerciseImage.put("expert_day6", expertDay6);
+        exerciseImage.put("expert_day7", expertDay7);
+        exerciseImage.put("fatloss_day1", fatlossDay1);
+        exerciseImage.put("fatloss_day2", fatlossDay2);
+        exerciseImage.put("fatloss_day3", fatlossDay3);
+        exerciseImage.put("fatloss_day4", fatlossDay4);
+        exerciseImage.put("fatloss_day5", fatlossDay5);
+        exerciseImage.put("fatloss_day6", fatlossDay6);
+        exerciseImage.put("fatloss_day7", fatlossDay7);
 
 //        exerciseImage.put("beginner_day1", )
         LinkedHashMap<String, Map<String, String>> exerciseText = new LinkedHashMap<>();
@@ -181,12 +216,22 @@ public class StartingWorkoutFragment extends Fragment {
         exerciseText.put("fatloss_day7", ExerciseEnum.FATLOSS_DAY_7.getExercises());
 
         Map<String, String> chosenExerciseMap = exerciseText.get(value);
+        arrayText = chosenExerciseMap.values().toArray();
 
+        int []chosenImagesArray=exerciseImage.get(value);
+//        chosenExerciseMap = exerciseImage.get(value);
         // Then, to retrieve the values for a given key:
-        array = chosenExerciseMap.values().toArray();
+        arrayImage = chosenExerciseMap.values().toArray();
         for (int i = 0; i < chosenExerciseMap.size(); i++) {
-            tvArr[i].setText((String) array[i]);
-            ivArr[i].setImageResource(beginnerDay1[i]);
+            tvArr[i].setText((String) arrayText[i]);
+            assert chosenImagesArray != null;
+            ivArr[i].setImageResource(chosenImagesArray[i]);
+        }
+        if (ivArr.length > chosenExerciseMap.size()) {
+            ivArr[4].setVisibility(View.GONE);
+            tv5min.setVisibility(View.GONE);
+            tvStart.setVisibility(View.GONE);
+            tvSets.setVisibility(View.GONE);
         }
     }
 }

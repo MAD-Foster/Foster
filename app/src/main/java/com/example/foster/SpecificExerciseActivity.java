@@ -61,38 +61,41 @@ public class SpecificExerciseActivity extends AppCompatActivity {
         Intent i = new Intent(SpecificExerciseActivity.this, WorkoutActivity.class);
         startActivity(i);
     }
-    String condition;
+    String stringCondition;
 
     public void goButton(View v) {
         int id = v.getId();
         switch (id) {
             case R.id.GO_beginner_day1:
-                condition = "beginner_day1";
+                stringCondition = "beginner_day1";
                 break;
             case R.id.GO_beginner_day2:
-                condition = "beginner_day2";
+                stringCondition = "beginner_day2";
                 break;
             case R.id.GO_beginner_day3:
-                condition = "beginner_day3";
+                stringCondition = "beginner_day3";
                 break;
             case R.id.GO_beginner_day4:
-                condition = "beginner_day4";
+                stringCondition = "beginner_day4";
                 break;
             case R.id.GO_beginner_day5:
-                condition = "beginner_day5";
+                stringCondition = "beginner_day5";
                 break;
             case R.id.GO_beginner_day6:
-                condition = "beginner_day6";
+                stringCondition = "beginner_day6";
                 break;
             case R.id.GO_beginner_day7:
-                condition = "beginner_day7";
+                stringCondition = "beginner_day7";
+                break;
+            case R.id.GO_intermediate_day1:
+                stringCondition = "beginner_day7";
                 break;
             default:
-                condition = "beginner_day7";
+                stringCondition = "beginner_day7";
         }
         Fragment fragment = new StartingWorkoutFragment();
         Bundle b = new Bundle();
-        b.putString("key", condition);
+        b.putString("key", stringCondition);
         fragment.setArguments(b);
 
 
@@ -103,7 +106,7 @@ public class SpecificExerciseActivity extends AppCompatActivity {
     }
 
     public String getCondition(){
-        return this.condition;
+        return this.stringCondition;
     }
 
 

@@ -359,7 +359,7 @@
             android:textColor="#FFFFFF"/>
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/TV5MinFifthExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="150dp"
@@ -371,6 +371,7 @@
             android:textColor="#FFB6C1"/>
 
         <TextView
+            android:id="@+id/TVStartFifthExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
@@ -383,7 +384,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/TVSetFifthExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"

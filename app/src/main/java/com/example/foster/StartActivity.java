@@ -19,8 +19,6 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        ExerciseEnum day;
-        int length=ExerciseEnum.values().length;
         for(ExerciseEnum a:ExerciseEnum.values()){
             for(String b:a.getExercises().keySet()){
                 System.out.println(a+" :"+b);

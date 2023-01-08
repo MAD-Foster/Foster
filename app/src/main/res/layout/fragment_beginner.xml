@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".BeginnerFragment">
 
-<!--    <ImageView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:adjustViewBounds="true"-->
-<!--        android:scaleType="fitXY"-->
-<!--        android:src="@drawable/bg_foster" />-->
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:adjustViewBounds="true"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        android:src="@drawable/bg_foster" />-->
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,8 +27,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:scaleType="fitXY"
                 android:alpha="0.9"
+                android:scaleType="fitXY"
                 android:src="@drawable/img_begg"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -136,10 +136,10 @@
                     <ImageView
                         android:id="@+id/GO_beginner_day1"
                         android:layout_width="wrap_content"
-                        android:onClick="goButton"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
+                        android:onClick="goButton"
                         android:src="@drawable/go__" />
 
 
@@ -202,11 +202,11 @@
 
                     <ImageView
                         android:id="@+id/GO_beginner_day3"
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="30dp"
+                        android:onClick="goButton"
                         android:src="@drawable/go__" />
 
 

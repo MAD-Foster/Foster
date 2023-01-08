@@ -25,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
 
     private TextView registerUser;
-    private EditText editTextFirstName, editTextLastName, editTextEmail, editTextPassword;
+    private EditText editTextFirstName, editTextLastName, editTextAge, editTextWeight, editTextEmail, editTextPassword;
     private ProgressBar progressbar;
     private RadioGroup radioGroup;
 
@@ -47,8 +47,11 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         registerUser.setOnClickListener(this);
         editTextFirstName = (EditText) findViewById(R.id.firstName);
         editTextLastName = (EditText) findViewById(R.id.lastName);
+        editTextAge = (EditText) findViewById(R.id.age);
+        editTextWeight = (EditText) findViewById(R.id.weight);
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
+
 
         radioGroup = findViewById(R.id.genderRadioGroup);
 
@@ -72,6 +75,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
     private void registerUser() {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+        String weight = editTextWeight.getText().toString().trim();
+        String age = editTextAge.getText().toString().trim();
         String firstName = editTextFirstName.getText().toString().trim();
         String lastName = editTextLastName.getText().toString().trim();
 
@@ -89,6 +94,18 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
         if(lastName.isEmpty()) {
             editTextLastName.setError("Last name is required!");
+            editTextLastName.requestFocus();
+            return;
+        }
+
+        if(age.isEmpty()) {
+            editTextLastName.setError("Age is required!");
+            editTextLastName.requestFocus();
+            return;
+        }
+
+        if(weight.isEmpty()) {
+            editTextLastName.setError("Weight is required!");
             editTextLastName.requestFocus();
             return;
         }
@@ -123,7 +140,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
-                            User user = new User(firstName, lastName, email, gender);
+                            User user = new User(firstName, lastName, age, weight, email, gender);
                             user.setGender(gender);
 
 

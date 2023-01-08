@@ -4,6 +4,7 @@ public class User {
     public String firstName;
     public String lastName;
     public String email;
+    public String age, weight;
 
     public String getGender() {
         return gender;
@@ -18,9 +19,11 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String gender) {
+    public User(String firstName, String lastName, String age, String weight, String email, String gender) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.age = age;
+        this.weight = weight;
         this.email = email;
         this.gender = gender;
     }

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Toolbar toolbar = findViewById(R.id.TBMainAct);
         setSupportActionBar(toolbar);
-        navigationView = findViewById(R.id.sideNav);
+        navigationView = findViewById(R.id.sideNavMain);
         navigationView.setItemIconTintList(null);
 
 

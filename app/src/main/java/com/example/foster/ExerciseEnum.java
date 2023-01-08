@@ -2,6 +2,7 @@ package com.example.foster;
 
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public enum ExerciseEnum {
@@ -40,8 +41,9 @@ public enum ExerciseEnum {
     private final Map<String,String> exercises;
 
     ExerciseEnum(String... exercises) {
-        this.exercises = new HashMap<>();
+        this.exercises = new LinkedHashMap<>();
         for(String name:exercises){
+            System.out.println("enum "+name);
             this.exercises.put(name,name);
         }
     }

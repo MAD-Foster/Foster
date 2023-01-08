@@ -15,7 +15,9 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -112,40 +114,13 @@ public class StartingWorkoutFragment extends Fragment {
         TextView[] tvArr = {firstTV, secondTV, thirdTV, fourthTV, fifthTV};
         ImageView[] ivArr = {firstIV, secondIV, thirdIV, fourthIV, fifthIV};
         //    BEGINNER_DAY_1("Jumping jacks", " Push-ups", "Lunges", " Plank", "Bicycle crunches"),
-        int[] beginnerDay1 = {R.drawable.img_jumpingjack,R.drawable.img_pushup,R.drawable.img_lunges,R.drawable.img_plank,R.drawable.img_bcrucnhes};
+        int[] beginnerDay1 = {R.drawable.img_jumpingjack, R.drawable.img_pushup, R.drawable.img_lunges, R.drawable.img_plank, R.drawable.img_bcrucnhes};
         Object[] array;
-//        Bundle b = this.getArguments();
-//        String value = b.getString("key");
-//        switch (value) {
-//            case "beginner_day1":
-//                array = ExerciseEnum.BEGINNER_DAY_1.getExercises().values().toArray();
-//                break;
-//            case "beginner_day2":
-//                array = ExerciseEnum.BEGINNER_DAY_2.getExercises().values().toArray();
-//                break;
-//            case "beginner_day3":
-//                array = ExerciseEnum.BEGINNER_DAY_3.getExercises().values().toArray();
-//                break;
-//            case "beginner_day4":
-//                array = ExerciseEnum.BEGINNER_DAY_4.getExercises().values().toArray();
-//                break;
-//            case "beginner_day5":
-//                array = ExerciseEnum.BEGINNER_DAY_5.getExercises().values().toArray();
-//                break;
-//            case "beginner_day6":
-//                array = ExerciseEnum.BEGINNER_DAY_6.getExercises().values().toArray();
-//                break;
-//            case "beginner_day7":
-//                array = ExerciseEnum.BEGINNER_DAY_7.getExercises().values().toArray();
-//                break;
-//            default:
-//                array = ExerciseEnum.BEGINNER_DAY_1.getExercises().values().toArray();
-//
-//        }
+
         Map<String, int[]> exerciseImage = new HashMap<>();
 
 //        exerciseImage.put("beginner_day1", )
-        Map<String, Map<String, String>> exerciseText = new HashMap<>();
+        LinkedHashMap<String, Map<String, String>> exerciseText = new LinkedHashMap<>();
         exerciseText.put("beginner_day1", ExerciseEnum.BEGINNER_DAY_1.getExercises());
         exerciseText.put("beginner_day2", ExerciseEnum.BEGINNER_DAY_2.getExercises());
         exerciseText.put("beginner_day3", ExerciseEnum.BEGINNER_DAY_3.getExercises());
@@ -153,7 +128,30 @@ public class StartingWorkoutFragment extends Fragment {
         exerciseText.put("beginner_day5", ExerciseEnum.BEGINNER_DAY_5.getExercises());
         exerciseText.put("beginner_day6", ExerciseEnum.BEGINNER_DAY_6.getExercises());
         exerciseText.put("beginner_day7", ExerciseEnum.BEGINNER_DAY_7.getExercises());
+        exerciseText.put("intermediate_day1", ExerciseEnum.INTERMEDIATE_DAY_1.getExercises());
+        exerciseText.put("intermediate_day2", ExerciseEnum.INTERMEDIATE_DAY_2.getExercises());
+        exerciseText.put("intermediate_day3", ExerciseEnum.INTERMEDIATE_DAY_3.getExercises());
+        exerciseText.put("intermediate_day4", ExerciseEnum.INTERMEDIATE_DAY_4.getExercises());
+        exerciseText.put("intermediate_day5", ExerciseEnum.INTERMEDIATE_DAY_5.getExercises());
+        exerciseText.put("intermediate_day6", ExerciseEnum.INTERMEDIATE_DAY_6.getExercises());
+        exerciseText.put("intermediate_day7", ExerciseEnum.INTERMEDIATE_DAY_7.getExercises());
+        exerciseText.put("expert_day1", ExerciseEnum.EXPERT_DAY_1.getExercises());
+        exerciseText.put("expert_day2", ExerciseEnum.EXPERT_DAY_2.getExercises());
+        exerciseText.put("expert_day3", ExerciseEnum.EXPERT_DAY_3.getExercises());
+        exerciseText.put("expert_day4", ExerciseEnum.EXPERT_DAY_4.getExercises());
+        exerciseText.put("expert_day5", ExerciseEnum.EXPERT_DAY_5.getExercises());
+        exerciseText.put("expert_day6", ExerciseEnum.EXPERT_DAY_6.getExercises());
+        exerciseText.put("expert_day7", ExerciseEnum.EXPERT_DAY_7.getExercises());
+        exerciseText.put("fatloss_day1", ExerciseEnum.FATLOSS_DAY_1.getExercises());
+        exerciseText.put("fatloss_day2", ExerciseEnum.FATLOSS_DAY_2.getExercises());
+        exerciseText.put("fatloss_day3", ExerciseEnum.FATLOSS_DAY_3.getExercises());
+        exerciseText.put("fatloss_day4", ExerciseEnum.FATLOSS_DAY_4.getExercises());
+        exerciseText.put("fatloss_day5", ExerciseEnum.FATLOSS_DAY_5.getExercises());
+        exerciseText.put("fatloss_day6", ExerciseEnum.FATLOSS_DAY_6.getExercises());
+        exerciseText.put("fatloss_day7", ExerciseEnum.FATLOSS_DAY_7.getExercises());
+
         Map<String, String> chosenExerciseMap = exerciseText.get(value);
+
         // Then, to retrieve the values for a given key:
         array = chosenExerciseMap.values().toArray();
         for (int i = 0; i < chosenExerciseMap.size(); i++) {
@@ -167,5 +165,8 @@ class ExerciseObject {
     TextView textView;
     ImageView imageView;
 
-
+    public ExerciseObject(TextView textView, ImageView imageView) {
+        this.textView = textView;
+        this.imageView = imageView;
+    }
 }

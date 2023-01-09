@@ -5,7 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MusicActivity">
-
+    
+    <com.example.jean.jcplayer.view.JcPlayerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/jcplayer"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -87,7 +93,6 @@
         android:listSelector="#6C6464"
         android:padding="5dp" />
 
-    <
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

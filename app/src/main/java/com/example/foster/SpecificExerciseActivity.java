@@ -10,8 +10,10 @@ import com.example.foster.WorkoutActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class SpecificExerciseActivity extends AppCompatActivity {
     Fragment fragmentBeginner = new BeginnerFragment();
@@ -169,6 +171,20 @@ public class SpecificExerciseActivity extends AppCompatActivity {
         transaction.commit();
     }
 
+//TextView tt=findViewById(R.id.TVTimerWorkout);
+//    public void timer(View v){
+//        new CountDownTimer(60000, 1000) {
+//            @Override
+//            public void onTick(long l) {
+//                tt.setText("Remaining :"+l/1000);
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//                tt.setText("Set Finished!");
+//            }
+//        }.start();
+//    }
     public String getCondition() {
         return this.stringCondition;
     }

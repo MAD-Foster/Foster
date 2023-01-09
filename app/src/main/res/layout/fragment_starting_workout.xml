@@ -34,6 +34,7 @@
 
 
         <TextView
+            android:id="@+id/TVTimerWorkout"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:text="1:00"
@@ -103,6 +104,7 @@
             android:textColor="#FFB6C1"/>
 
         <TextView
+            android:id="@+id/StartButtonFirstExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
@@ -170,6 +172,7 @@
             android:textColor="#FFB6C1"/>
 
         <TextView
+            android:id="@+id/StartButtonSecondExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
@@ -237,6 +240,7 @@
             android:textColor="#FFB6C1"/>
 
         <TextView
+            android:id="@+id/StartButtonThirdExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
@@ -304,6 +308,7 @@
             android:textColor="#FFB6C1"/>
 
         <TextView
+            android:id="@+id/StartButtonFourthExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
@@ -333,7 +338,7 @@
         android:layout_height="120dp"
         android:layout_marginTop="510dp"
         android:orientation="horizontal"
-        android:paddingBottom="20dp">
+        android:paddingBottom="0dp">
 
         <ImageView
             android:id="@+id/IVFifthExercise"

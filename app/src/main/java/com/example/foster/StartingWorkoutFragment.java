@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ import java.util.Map;
  * Use the {@link StartingWorkoutFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class StartingWorkoutFragment extends Fragment {
+public class StartingWorkoutFragment extends Fragment implements View.OnClickListener {
     String value;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -83,6 +84,12 @@ public class StartingWorkoutFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 //        View view = inflater.inflate(R.layout.fragment_starting_workout, container, false);
+        timerCountdown = view.findViewById(R.id.TVTimerWorkout);
+        startButtonFirst = view.findViewById(R.id.StartButtonFirstExercise);
+        startButtonSecond = view.findViewById(R.id.StartButtonSecondExercise);
+        startButtonThird = view.findViewById(R.id.StartButtonThirdExercise);
+        startButtonFourth = view.findViewById(R.id.StartButtonFourthExercise);
+
         firstTV = view.findViewById(R.id.TVFirstExercise);
         secondTV = view.findViewById(R.id.TVSecondExercise);
         thirdTV = view.findViewById(R.id.TVThirdExercise);
@@ -98,6 +105,11 @@ public class StartingWorkoutFragment extends Fragment {
         tvSets = view.findViewById(R.id.TVSetFifthExercise);
         tvStart = view.findViewById(R.id.TVStartFifthExercise);
         setExerciseTextAndImage();
+        tvStart.setOnClickListener(this);
+        startButtonFirst.setOnClickListener(this);
+        startButtonSecond.setOnClickListener(this);
+        startButtonThird.setOnClickListener(this);
+        startButtonFourth.setOnClickListener(this);
 
     }
 
@@ -216,9 +228,10 @@ public class StartingWorkoutFragment extends Fragment {
         exerciseText.put("fatloss_day7", ExerciseEnum.FATLOSS_DAY_7.getExercises());
 
         Map<String, String> chosenExerciseMap = exerciseText.get(value);
+        assert chosenExerciseMap != null;
         arrayText = chosenExerciseMap.values().toArray();
 
-        int []chosenImagesArray=exerciseImage.get(value);
+        int[] chosenImagesArray = exerciseImage.get(value);
 //        chosenExerciseMap = exerciseImage.get(value);
         // Then, to retrieve the values for a given key:
         arrayImage = chosenExerciseMap.values().toArray();
@@ -235,7 +248,51 @@ public class StartingWorkoutFragment extends Fragment {
             tvSets.setVisibility(View.GONE);
         }
     }
+
+    TextView startButtonFirst, startButtonSecond, startButtonThird, startButtonFourth;
+    TextView timerCountdown;
+    private CountDownTimer countDownTimer;
+    private long timeLeftInMilliseconds = 60000;
+
+    @Override
+    public void onClick(View v) {
+        if (v == startButtonFirst || v == startButtonSecond || v == startButtonThird || v == startButtonFourth || v == tvStart) {
+            startTimer();
+        }
+
+    }
+
+    private void startTimer() {
+        timeLeftInMilliseconds=60000;
+        countDownTimer = new CountDownTimer(timeLeftInMilliseconds, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeLeftInMilliseconds = millisUntilFinished;
+                updateTimer();
+            }
+
+            @Override
+            public void onFinish() {
+                timerCountdown.setText("Sets Finished!");
+            }
+        }.start();
+    }
+
+    private void updateTimer() {
+        int minutes = (int) timeLeftInMilliseconds / 60000;
+        int seconds = (int) timeLeftInMilliseconds % 60000 / 1000;
+
+        String timeLeftText;
+        if (seconds < 10) {
+            timeLeftText = "" + minutes + ":0" + seconds;
+        } else {
+            timeLeftText = "" + minutes + ":" + seconds;
+        }
+
+        timerCountdown.setText(timeLeftText);
+    }
 }
+
 
 class ExerciseObject {
     TextView textView;

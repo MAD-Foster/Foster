@@ -290,13 +290,13 @@ public class StartingWorkoutFragment extends Fragment implements View.OnClickLis
                     set4=String.valueOf(a);
                     tt=set4+ "Sets left!";
 
-                    TVThirdSet.setText(tt);
+                    TVFourthSet.setText(tt);
                 } else if (tvStart.equals(v) && Integer.parseInt(set5) > 0) {
                     int a=Integer.parseInt(set5);
                     a--;
                     set5=String.valueOf(a);
                     tt=set5+ "Sets left!";
-                    TVThirdSet.setText(tt);
+                    tvSets.setText(tt);
                 }
                 startTimer();
             }

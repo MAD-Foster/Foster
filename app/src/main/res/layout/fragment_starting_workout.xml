@@ -117,12 +117,12 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/TVSetFirstExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
             android:layout_marginTop="74dp"
-            android:text="2 sets left"
+            android:text="3 Sets left"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -185,12 +185,12 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/TVSetSecondExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
             android:layout_marginTop="74dp"
-            android:text="2 sets left"
+            android:text="3 Sets left"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -253,12 +253,12 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/TVSetThirdExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
             android:layout_marginTop="74dp"
-            android:text="2 sets left"
+            android:text="3 Sets left"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -321,12 +321,12 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/TVSetFourthExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
             android:layout_marginTop="74dp"
-            android:text="2 sets left"
+            android:text="3 Sets left"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -395,7 +395,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
             android:layout_marginTop="74dp"
-            android:text="2 sets left"
+            android:text="3 Sets left"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

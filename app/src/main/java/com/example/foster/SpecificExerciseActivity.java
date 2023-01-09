@@ -20,7 +20,7 @@ public class SpecificExerciseActivity extends AppCompatActivity {
     Fragment fragmentIntermediate = new IntermediateFragment();
     Fragment fragmentExpert = new ExpertFragment();
     Fragment fragmentFatLoss = new FatLossFragment();
-
+int whichFragment=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,15 +30,19 @@ public class SpecificExerciseActivity extends AppCompatActivity {
         int condition = b.getInt("key");
         switch (condition) {
             case 1:
+                whichFragment=1;
                 loadFragment(fragmentBeginner);
                 break;
             case 2:
+                whichFragment=2;
                 loadFragment(fragmentIntermediate);
                 break;
             case 3:
+                whichFragment=3;
                 loadFragment(fragmentFatLoss);
                 break;
             case 4:
+                whichFragment=4;
                 loadFragment(fragmentExpert);
                 break;
         }
@@ -46,22 +50,28 @@ public class SpecificExerciseActivity extends AppCompatActivity {
     }
 
 
-//    @Override
-//    public void onClick(View v) {
-//        System.out.println(123);
-//        switch (v.getId()) {
-//            case R.id.backButtonASE:
-//                Intent i = new Intent(SpecificExerciseActivity.this, WorkoutActivity.class);
-//                startActivity(i);
-//                break;
-//        }
-//
-//    }
 
     public void backButton(View v) {
-
-        Intent i = new Intent(SpecificExerciseActivity.this, WorkoutActivity.class);
-        startActivity(i);
+        StartingWorkoutFragment startingWorkoutFragment = (StartingWorkoutFragment) getSupportFragmentManager().findFragmentByTag("starting_workout_fragment");
+        if (startingWorkoutFragment != null && startingWorkoutFragment.isVisible()) {
+            switch (whichFragment){
+                case 1:
+                    loadFragment(fragmentBeginner);
+                    break;
+                case 2:
+                    loadFragment(fragmentIntermediate);
+                    break;
+                case 3:
+                    loadFragment(fragmentFatLoss);
+                    break;
+                case 4:
+                    loadFragment(fragmentExpert);
+                    break;
+            }
+        }else {
+            Intent i = new Intent(SpecificExerciseActivity.this, WorkoutActivity.class);
+            startActivity(i);
+        }
     }
 
     String stringCondition;
@@ -134,7 +144,7 @@ public class SpecificExerciseActivity extends AppCompatActivity {
             case R.id.GO_expert_day7:
                 stringCondition = "expert_day7";
                 break;
-                //@@@@@@@@@@@@@@@@@@@
+            //@@@@@@@@@@@@@@@@@@@
             case R.id.GO_fatloss_day1:
                 stringCondition = "fatloss_day1";
                 break;
@@ -166,12 +176,12 @@ public class SpecificExerciseActivity extends AppCompatActivity {
 
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.NHFSpecificExercise, new StartingWorkoutFragment());
+        transaction.replace(R.id.NHFSpecificExercise, new StartingWorkoutFragment(), "starting_workout_fragment");
         transaction.addToBackStack(null);
         transaction.commit();
     }
 
-//TextView tt=findViewById(R.id.TVTimerWorkout);
+    //TextView tt=findViewById(R.id.TVTimerWorkout);
 //    public void timer(View v){
 //        new CountDownTimer(60000, 1000) {
 //            @Override

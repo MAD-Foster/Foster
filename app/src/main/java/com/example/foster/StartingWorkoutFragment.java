@@ -72,8 +72,7 @@ public class StartingWorkoutFragment extends Fragment implements View.OnClickLis
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
 //        setExerciseTextAndImage();
@@ -90,6 +89,11 @@ public class StartingWorkoutFragment extends Fragment implements View.OnClickLis
         startButtonThird = view.findViewById(R.id.StartButtonThirdExercise);
         startButtonFourth = view.findViewById(R.id.StartButtonFourthExercise);
 
+        TVFirstSet = view.findViewById(R.id.TVSetFirstExercise);
+        TVSecondSet = view.findViewById(R.id.TVSetSecondExercise);
+        TVThirdSet = view.findViewById(R.id.TVSetThirdExercise);
+        TVFourthSet = view.findViewById(R.id.TVSetFourthExercise);
+
         firstTV = view.findViewById(R.id.TVFirstExercise);
         secondTV = view.findViewById(R.id.TVSecondExercise);
         thirdTV = view.findViewById(R.id.TVThirdExercise);
@@ -104,6 +108,12 @@ public class StartingWorkoutFragment extends Fragment implements View.OnClickLis
         tv5min = view.findViewById(R.id.TV5MinFifthExercise);
         tvSets = view.findViewById(R.id.TVSetFifthExercise);
         tvStart = view.findViewById(R.id.TVStartFifthExercise);
+
+        set1 = "3";
+        set2 = "3";
+        set3 = "3";
+        set4 = "3";
+        set5 = "3";
         setExerciseTextAndImage();
         tvStart.setOnClickListener(this);
         startButtonFirst.setOnClickListener(this);
@@ -114,16 +124,8 @@ public class StartingWorkoutFragment extends Fragment implements View.OnClickLis
     }
 
     private TextView tv5min, tvStart, tvSets;
-    private TextView firstTV,
-            secondTV,
-            thirdTV,
-            fourthTV,
-            fifthTV;
-    private ImageView firstIV,
-            secondIV,
-            thirdIV,
-            fourthIV,
-            fifthIV;
+    private TextView firstTV, secondTV, thirdTV, fourthTV, fifthTV;
+    private ImageView firstIV, secondIV, thirdIV, fourthIV, fifthIV;
 //    HashMap<String,> hashMap = new HashMap<>();
 
 
@@ -254,28 +256,65 @@ public class StartingWorkoutFragment extends Fragment implements View.OnClickLis
     private CountDownTimer countDownTimer;
     private long timeLeftInMilliseconds = 60000;
 
+    String set1, set2, set3, set4, set5;
+
     @Override
     public void onClick(View v) {
+        TextView test = (TextView) v;
         if (v == startButtonFirst || v == startButtonSecond || v == startButtonThird || v == startButtonFourth || v == tvStart) {
+            if (startButtonFirst.equals(v) && Integer.valueOf(set1) > 0) {
+                int a = Integer.parseInt(set1);
+                a--;
+                set1=String.valueOf(a);
+                TVFirstSet.setText(set1 +" Sets left!");
+            } else if (startButtonSecond.equals(v) && Integer.valueOf(set2) > 0) {
+                int a=Integer.parseInt(set1);
+                a--;
+                set2=String.valueOf(a);
+                TVSecondSet.setText(set2+" Sets left!");
+            } else if (startButtonThird.equals(v) && Integer.valueOf(set3) > 0) {
+                int a=Integer.parseInt(set3);
+                a--;
+                set3=String.valueOf(a);
+                TVThirdSet.setText(set3+" Sets left!");
+            } else if (startButtonFourth.equals(v) && Integer.valueOf(set4) > 0) {
+                int a=Integer.parseInt(set4);
+                a--;
+                set4=String.valueOf(a);
+                TVThirdSet.setText(set4+" Sets left!");
+            } else if (tvStart.equals(v) && Integer.valueOf(set5) > 0) {
+                int a=Integer.parseInt(set5);
+                a--;
+                set5=String.valueOf(a);
+                TVThirdSet.setText(tvSets+" Sets left!");
+            }
             startTimer();
         }
 
     }
 
-    private void startTimer() {
-        timeLeftInMilliseconds=60000;
-        countDownTimer = new CountDownTimer(timeLeftInMilliseconds, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                timeLeftInMilliseconds = millisUntilFinished;
-                updateTimer();
-            }
+    TextView TVFirstSet, TVSecondSet, TVThirdSet, TVFourthSet;
+    int currentTimer = 0;
 
-            @Override
-            public void onFinish() {
-                timerCountdown.setText("Sets Finished!");
-            }
-        }.start();
+
+    private void startTimer() {
+        if (currentTimer == 0) {
+            currentTimer = 1;
+            timeLeftInMilliseconds = 60000;
+            countDownTimer = new CountDownTimer(timeLeftInMilliseconds, 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    timeLeftInMilliseconds = millisUntilFinished;
+                    updateTimer();
+                }
+
+                @Override
+                public void onFinish() {
+                    timerCountdown.setText("Sets Finished!");
+                    currentTimer = 0;
+                }
+            }.start();
+        }
     }
 
     private void updateTimer() {

@@ -260,36 +260,48 @@ public class StartingWorkoutFragment extends Fragment implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        TextView test = (TextView) v;
-        if (v == startButtonFirst || v == startButtonSecond || v == startButtonThird || v == startButtonFourth || v == tvStart) {
-            if (startButtonFirst.equals(v) && Integer.valueOf(set1) > 0) {
-                int a = Integer.parseInt(set1);
-                a--;
-                set1=String.valueOf(a);
-                TVFirstSet.setText(set1 +" Sets left!");
-            } else if (startButtonSecond.equals(v) && Integer.valueOf(set2) > 0) {
-                int a=Integer.parseInt(set1);
-                a--;
-                set2=String.valueOf(a);
-                TVSecondSet.setText(set2+" Sets left!");
-            } else if (startButtonThird.equals(v) && Integer.valueOf(set3) > 0) {
-                int a=Integer.parseInt(set3);
-                a--;
-                set3=String.valueOf(a);
-                TVThirdSet.setText(set3+" Sets left!");
-            } else if (startButtonFourth.equals(v) && Integer.valueOf(set4) > 0) {
-                int a=Integer.parseInt(set4);
-                a--;
-                set4=String.valueOf(a);
-                TVThirdSet.setText(set4+" Sets left!");
-            } else if (tvStart.equals(v) && Integer.valueOf(set5) > 0) {
-                int a=Integer.parseInt(set5);
-                a--;
-                set5=String.valueOf(a);
-                TVThirdSet.setText(tvSets+" Sets left!");
+
+        String tt;
+        if(currentTimer==0){
+            if (v == startButtonFirst || v == startButtonSecond || v == startButtonThird || v == startButtonFourth || v == tvStart) {
+                if (startButtonFirst.equals(v) && Integer.parseInt(set1) > 0) {
+                    int a = Integer.parseInt(set1);
+                    a--;
+                    set1=String.valueOf(a);
+                    tt=set1+ "Sets left!";
+                    TVFirstSet.setText(tt);
+                } else if (startButtonSecond.equals(v) && Integer.parseInt(set2) > 0) {
+                    int a=Integer.parseInt(set1);
+                    a--;
+                    set2=String.valueOf(a);
+                    tt=set2+ "Sets left!";
+
+                    TVSecondSet.setText(tt);
+                } else if (startButtonThird.equals(v) && Integer.parseInt(set3) > 0) {
+                    int a=Integer.parseInt(set3);
+                    a--;
+                    set3=String.valueOf(a);
+                    tt=set3+ "Sets left!";
+
+                    TVThirdSet.setText(tt);
+                } else if (startButtonFourth.equals(v) && Integer.parseInt(set4) > 0) {
+                    int a=Integer.parseInt(set4);
+                    a--;
+                    set4=String.valueOf(a);
+                    tt=set4+ "Sets left!";
+
+                    TVThirdSet.setText(tt);
+                } else if (tvStart.equals(v) && Integer.parseInt(set5) > 0) {
+                    int a=Integer.parseInt(set5);
+                    a--;
+                    set5=String.valueOf(a);
+                    tt=set5+ "Sets left!";
+                    TVThirdSet.setText(tt);
+                }
+                startTimer();
             }
-            startTimer();
         }
+
 
     }
 

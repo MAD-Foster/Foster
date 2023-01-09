@@ -79,5 +79,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wave_red" />
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/myListView"
+        android:choiceMode="singleChoice"
+        android:listSelector="#6C6464"
+        android:padding="5dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

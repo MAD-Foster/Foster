@@ -23,9 +23,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     BottomNavigationView bottomNavigationView;
     NavigationView navigationView;
@@ -37,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        bottomNavigationView = findViewById(R.id.bottom_nav_view);
+        bottomNavigationView.setOnItemSelectedListener(this::onOptionsItemSelected);
         Toolbar toolbar = findViewById(R.id.TBMainAct);
         setSupportActionBar(toolbar);
         navigationView = findViewById(R.id.sideNavMain);
@@ -118,10 +120,46 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.DestHome) {
+            Intent i = new Intent(MainActivity.this, WorkoutActivity.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.DestMusicPage) {
+            Intent i = new Intent(MainActivity.this, MusicActivity.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.DestSettings) {
+            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.DestWorkoutPage) {
+            Intent i = new Intent(MainActivity.this, WorkoutActivity.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.DestStepsPage) {
+//            Intent i = new Intent(MainActivity.this, StepsActivity.class);
+//            startActivity(i);
+        }
+
         if (toggle.onOptionsItemSelected(item)) {
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
-
+//
+//    @Override
+//    public void onNavigationItemReselected(@NonNull MenuItem item) {
+//        if (item.getItemId() == R.id.DestHome) {
+//            Intent i = new Intent(MainActivity.this, WorkoutActivity.class);
+//            startActivity(i);
+//        } else if (item.getItemId() == R.id.DestMusicPage) {
+//            Intent i = new Intent(MainActivity.this, MusicActivity.class);
+//            startActivity(i);
+//        } else if (item.getItemId() == R.id.DestSettings) {
+//            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+//            startActivity(i);
+//        } else if (item.getItemId() == R.id.DestWorkoutPage) {
+//            Intent i = new Intent(MainActivity.this, WorkoutActivity.class);
+//            startActivity(i);
+//        } else if (item.getItemId() == R.id.DestStepsPage) {
+////            Intent i = new Intent(MainActivity.this, StepsActivity.class);
+////            startActivity(i);
+//        }
+//    }
 }

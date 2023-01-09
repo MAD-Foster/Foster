@@ -21,8 +21,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.example.jean.jcplayer.model.JcAudio;
-//import com.example.jean.jcplayer.view.JcPlayerView;
+import com.example.jean.jcplayer.model.JcAudio;
+import com.example.jean.jcplayer.view.JcPlayerView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -57,8 +57,8 @@ public class MusicActivity extends AppCompatActivity {
     ArrayList<String> arrayListSongsUrl = new ArrayList<>();
     ArrayAdapter<String> arrayAdapter;
 
-    //JcPlayerView jcPlayerView;
-    // ArrayList<JcAudio> jcAudios = new ArrayList<>();
+    JcPlayerView jcPlayerView;
+    ArrayList<JcAudio> jcAudios = new ArrayList<>();
 
 
     @Override
@@ -66,7 +66,7 @@ public class MusicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
         listView = findViewById(R.id.myListView);
-        // jcPlayerView = findViewById(R.id.jcplayer);
+        jcPlayerView = findViewById(R.id.jcplayer);
 
         retrieveSongs();
 
@@ -74,8 +74,8 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                //   jcPlayerView.playAudio(jcAudios.get(position));
-                //   jcPlayerView.setVisibility(View.VISIBLE);
+                jcPlayerView.playAudio(jcAudios.get(position));
+                jcPlayerView.setVisibility(View.VISIBLE);
 
             }
         });
@@ -94,7 +94,7 @@ public class MusicActivity extends AppCompatActivity {
                     Song songObj = ds.getValue(Song.class);
                     arrayListSongsName.add(songObj.getSongName());
                     arrayListSongsUrl.add(songObj.getSongUrl());
-                    //   jcAudios.add(JcAudio.createFromURL(songObj.getSongName(), songObj.getSongUrl()));
+                    jcAudios.add(JcAudio.createFromURL(songObj.getSongName(), songObj.getSongUrl()));
 
 
                 }
@@ -114,7 +114,7 @@ public class MusicActivity extends AppCompatActivity {
                         return view;
                     }
                 };
-                //  jcPlayerView.initPlaylist(jcAudios,null);
+                jcPlayerView.initPlaylist(jcAudios,null);
                 listView.setAdapter(arrayAdapter);
 
             }

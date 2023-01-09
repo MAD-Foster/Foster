@@ -1,6 +1,7 @@
 package com.example.foster;
 
 public class Song {
+<<<<<<< Updated upstream
     private String songName, songUrl;
 
     public Song() {
@@ -26,4 +27,6 @@ public class Song {
     public void setSongUrl(String songUrl) {
         this.songUrl = songUrl;
     }
+=======
+>>>>>>> Stashed changes
 }

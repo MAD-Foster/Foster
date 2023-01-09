@@ -268,34 +268,34 @@ public class StartingWorkoutFragment extends Fragment implements View.OnClickLis
                     int a = Integer.parseInt(set1);
                     a--;
                     set1=String.valueOf(a);
-                    tt=set1+ "Sets left!";
+                    tt=set1+ " Sets left!";
                     TVFirstSet.setText(tt);
                 } else if (startButtonSecond.equals(v) && Integer.parseInt(set2) > 0) {
                     int a=Integer.parseInt(set1);
                     a--;
                     set2=String.valueOf(a);
-                    tt=set2+ "Sets left!";
+                    tt=set2+ " Sets left!";
 
                     TVSecondSet.setText(tt);
                 } else if (startButtonThird.equals(v) && Integer.parseInt(set3) > 0) {
                     int a=Integer.parseInt(set3);
                     a--;
                     set3=String.valueOf(a);
-                    tt=set3+ "Sets left!";
+                    tt=set3+ " Sets left!";
 
                     TVThirdSet.setText(tt);
                 } else if (startButtonFourth.equals(v) && Integer.parseInt(set4) > 0) {
                     int a=Integer.parseInt(set4);
                     a--;
                     set4=String.valueOf(a);
-                    tt=set4+ "Sets left!";
+                    tt=set4+ " Sets left!";
 
                     TVFourthSet.setText(tt);
                 } else if (tvStart.equals(v) && Integer.parseInt(set5) > 0) {
                     int a=Integer.parseInt(set5);
                     a--;
                     set5=String.valueOf(a);
-                    tt=set5+ "Sets left!";
+                    tt=set5+ " Sets left!";
                     tvSets.setText(tt);
                 }
                 startTimer();

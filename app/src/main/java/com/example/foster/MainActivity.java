@@ -206,7 +206,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                Intent i = new Intent(MainActivity.this, StepsActivity.class);
 //                startActivity(i);
                 break;
-
+            case R.id.actionLogout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
 
         }
 //        if (toggle.onOptionsItemSelected(item)) {
@@ -214,15 +219,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        }
         return super.onOptionsItemSelected(item);
 
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.actionLogout:
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
 
     }
 }

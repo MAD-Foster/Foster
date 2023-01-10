@@ -12,9 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
-        <activity
 
+<!--            android:name=".SpecificExerciseActivity"-->
+        <activity
             android:name=".SpecificExerciseActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
 
             android:name=".RegisterUser"
             android:exported="false">
@@ -53,32 +60,32 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".SettingsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_settings">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".WorkoutActivity"
-            android:exported="false"
-            android:label="@string/title_activity_workout">
-            <!--            android:theme="@style/Theme.Foster.NoActionBar">-->
-        <meta-data
-            android:name="android.app.lib_name"
-            android:value="" />
+<!--        <activity-->
+<!--            android:name=".SettingsActivity"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_settings">-->
+<!--            <meta-data-->
+<!--                android:name="android.app.lib_name"-->
+<!--                android:value="" />-->
+<!--        </activity>-->
+<!--        <activity-->
+<!--            android:name=".WorkoutActivity"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_workout">-->
+<!--            &lt;!&ndash;            android:theme="@style/Theme.Foster.NoActionBar">&ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="android.app.lib_name"-->
+<!--            android:value="" />-->
 
-    </activity>
+<!--    </activity>-->
 
-    <activity
-        android:name=".MusicActivity"
-        android:exported="false">
-        <meta-data
-            android:name="android.app.lib_name"
-            android:value="" />
-    </activity>
+<!--    <activity-->
+<!--        android:name=".MusicActivity"-->
+<!--        android:exported="false">-->
+<!--        <meta-data-->
+<!--            android:name="android.app.lib_name"-->
+<!--            android:value="" />-->
+<!--    </activity>-->
     <activity
         android:name=".MainActivity"
         android:exported="false">

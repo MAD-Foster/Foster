@@ -114,6 +114,7 @@ public class StartingWorkoutFragment extends Fragment implements View.OnClickLis
         set3 = "3";
         set4 = "3";
         set5 = "3";
+
         setExerciseTextAndImage();
         tvStart.setOnClickListener(this);
         startButtonFirst.setOnClickListener(this);
@@ -134,7 +135,6 @@ public class StartingWorkoutFragment extends Fragment implements View.OnClickLis
         ImageView[] ivArr = {firstIV, secondIV, thirdIV, fourthIV, fifthIV};
 
         int[] beginnerDay1 = {R.drawable.img_jumpingjack, R.drawable.img_pushup, R.drawable.img_lunges, R.drawable.img_plank, R.drawable.img_bcrucnhes};
-
         int[] beginnerDay2 = {R.drawable.img_squat, R.drawable.img_tridips, R.drawable.img_burpees, R.drawable.img_sideplank, R.drawable.img_highknees};
         int[] beginnerDay3 = {R.drawable.img_boxjumps, R.drawable.img_stepups, R.drawable.img_russiantwist, R.drawable.img_legraises}; //4
         int[] beginnerDay4 = {R.drawable.img_pushup, R.drawable.img_squat, R.drawable.img_situps, R.drawable.img_mountain}; //4

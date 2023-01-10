@@ -6,12 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".StepsPage">
 
+    <ImageView
+        android:id="@+id/logoHouse"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:adjustViewBounds="true"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bg_foster" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:adjustViewBounds="true"
+        android:alpha="0.7"
+        android:scaleType="fitXY"
+        android:elevation="1dp"
+        android:src="@drawable/wave_red" />
+
     <TextView
         android:id="@+id/totalStepCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="168dp"
         android:text="Total Step Counter"
+        android:textColor="#FFFFFF"
+        android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="168dp"
         android:text="Step Counter"
+        android:textColor="#FFFFFF"
+        android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,10 +60,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Step Detector"
+        android:textColor="#FFFFFF"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stepCounter"
         app:layout_constraintVertical_bias="0.285" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

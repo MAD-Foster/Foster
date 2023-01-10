@@ -9,18 +9,19 @@
 
     <ImageView
         android:id="@+id/fosterLogo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="516dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
         android:elevation="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_white" />
+
 
     <EditText
         android:id="@+id/firstName"
-        android:layout_width="380dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="148dp"
         android:elevation="2dp"
@@ -29,15 +30,15 @@
         android:inputType="text"
         android:textColor="#6F1B1B"
         android:textColorHint="#6F1B1B"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="30dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/lastName"
-        android:layout_width="380dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:elevation="2dp"
@@ -46,14 +47,14 @@
         android:inputType="text"
         android:textColor="#6F1B1B"
         android:textColorHint="#6F1B1B"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="20sp"
+        android:layout_marginRight="30dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
     <EditText
         android:id="@+id/age"
-        android:layout_width="380dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:elevation="2dp"
@@ -62,15 +63,15 @@
         android:inputType="text"
         android:textColor="#6F1B1B"
         android:textColorHint="#6F1B1B"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="20sp"
+        android:layout_marginRight="30dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastName" />
 
 
     <EditText
         android:id="@+id/weight"
-        android:layout_width="380dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:elevation="2dp"
@@ -79,14 +80,14 @@
         android:inputType="text"
         android:textColor="#6F1B1B"
         android:textColorHint="#6F1B1B"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="20sp"
+        android:layout_marginRight="30dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/age" />
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="380dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:elevation="2dp"
@@ -95,24 +96,24 @@
         android:inputType="textEmailAddress"
         android:textColor="#6F1B1B"
         android:textColorHint="#6F1B1B"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="20sp"
+        android:layout_marginRight="30dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weight" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="380dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
         android:elevation="2dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:textColor="#6F1B1B"
         android:textColorHint="#6F1B1B"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="20sp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -121,10 +122,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="124dp"
         android:elevation="2dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password">
 
         <RadioButton
@@ -134,6 +135,7 @@
             android:layout_marginHorizontal="5dp"
             android:elevation="2dp"
             android:text="Male"
+            android:textSize="20sp"
             android:textColor="#6F1B1B" />
 
         <RadioButton
@@ -143,20 +145,21 @@
             android:layout_marginHorizontal="5dp"
             android:elevation="2dp"
             android:text="Female"
+            android:textSize="20sp"
             android:textColor="#6F1B1B" />
 
     </RadioGroup>
 
     <Button
         android:id="@+id/registerUser"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#B8618A"
         android:elevation="2dp"
         android:text="Sign Up"
         android:textColor="#000000"
-        android:textSize="26sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -188,6 +191,73 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/bg_foster" />
 
+    <ImageView
+        android:id="@+id/NameIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="145dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/name" />
+
+
+    <ImageView
+        android:id="@+id/AgeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="85dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NameIcon"
+        app:srcCompat="@drawable/age_logo" />
+
+    <ImageView
+        android:id="@+id/WeightIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AgeIcon"
+        app:srcCompat="@drawable/weight_scale" />
+
+    <ImageView
+        android:id="@+id/EmailIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WeightIcon"
+        app:srcCompat="@drawable/email_logo" />
+
+    <ImageView
+        android:id="@+id/PasswordIcon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailIcon"
+        app:srcCompat="@drawable/password" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:adjustViewBounds="true"
+        android:alpha="0.7"
+        android:scaleType="fitXY"
+        android:elevation="2dp"
+        android:src="@drawable/wave_red" />
+
     <TextView
         android:id="@+id/loginNow"
         android:layout_width="wrap_content"
@@ -196,7 +266,7 @@
         android:layout_marginBottom="76dp"
         android:elevation="2dp"
         android:text="Already have an account? Login  now"
-        android:textColor="#ffffff"
+        android:textColor="#F8E9E9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

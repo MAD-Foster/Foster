@@ -63,26 +63,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="90dp"
         android:elevation="2dp"
         android:textSize="15sp"
         android:text="Don't Have an account yet?"
-        android:textColor="#971F3C"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="290dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="90dp"
         android:elevation="2dp"
         android:textSize="15sp"
         android:text="@string/register_button"
         android:textStyle="bold"
-        android:textColor="#971F3C"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
@@ -95,7 +94,7 @@
         android:layout_marginBottom="220dp"
         android:elevation="2dp"
         android:text="FORGOT PASSWORD ?"
-        android:textColor="#971F3C"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -124,6 +123,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bg_foster" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:adjustViewBounds="true"
+        android:alpha="0.7"
+        android:scaleType="fitXY"
+        android:elevation="1dp"
+        android:src="@drawable/wave_red" />
 
     <ImageView
         android:id="@+id/imageView5"

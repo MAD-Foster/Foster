@@ -57,6 +57,7 @@
             android:id="@+id/bottom_nav_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:itemIconTint="@drawable/bottom_nav_selector"
             android:layout_marginRight="16dp"
             android:background="@drawable/transparent_background"
             app:backgroundTint="#1D0202"
@@ -66,10 +67,11 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:labelVisibilityMode="labeled"
+        app:tint="@color/white"
         android:backgroundTint="@color/maroon"
         android:src="@drawable/ic_baseline_home_24"
         app:layout_anchor="@id/bottomAppBar" />

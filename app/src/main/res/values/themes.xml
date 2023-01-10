@@ -35,7 +35,7 @@
         <item name="color">@color/maroon</item>
         <item name="android:textColorSecondary">@color/white</item>
         <!-- floating color -->
-        <item name="colorOnSecondary">@color/black</item>
+<!--        <item name="colorOnSecondary">@color/white</item>-->
 
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>
     </style>

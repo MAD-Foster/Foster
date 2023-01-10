@@ -34,7 +34,6 @@
             android:textColor="@color/white"
             android:title="@string/steps_sidenav_title" />
 
-
     </menu>
 </item>
 <group android:checkableBehavior="single">
@@ -51,6 +50,8 @@
                 android:icon="@drawable/ic_baseline_info_24"
                 android:textColor="@color/white"
                 android:title="@string/aboutapp_title" />
+
+
             <item
                 android:id="@+id/DestLogout"
                 android:icon="@drawable/ic_baseline_logout_24"

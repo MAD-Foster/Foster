@@ -7,6 +7,7 @@
     <item
         android:id="@+id/DestWorkoutPage"
         app:labelVisibilityMode="labeled"
+        android:checkable="false"
         android:icon="@drawable/fitness_svgrepo_com"
         android:title="Train" />
 

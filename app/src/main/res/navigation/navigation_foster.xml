@@ -9,5 +9,11 @@
         android:name="com.example.foster.SpecificExerciseActivity"
         android:label="activity_specific_exercise"
         tools:layout="@layout/activity_specific_exercise" />
+    <activity
+        android:id="@+id/mainActivity"
+
+        android:name="com.example.foster.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 
 </navigation>

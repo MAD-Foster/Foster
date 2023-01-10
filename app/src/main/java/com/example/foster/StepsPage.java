@@ -28,6 +28,8 @@ import java.util.HashMap;
 
 public class StepsPage extends AppCompatActivity implements SensorEventListener {
     private TextView textViewStepCounter, textViewStepDetector, textViewTotalStepsCounter;
+    private TextView textViewCaloriesBurned;
+
     private SensorManager sensorManager;
     private Sensor mStepCounter;
     private boolean isCounterSensorPresent;
@@ -50,6 +52,8 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener 
         textViewStepCounter = findViewById(R.id.stepCounter);
         textViewStepDetector = findViewById(R.id.stepDetector);
         textViewTotalStepsCounter = findViewById(R.id.totalStepCounter);
+        textViewCaloriesBurned = findViewById(R.id.caloriesBurned);
+
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
@@ -98,6 +102,8 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener 
         if(sensorEvent.sensor == mStepCounter){
             stepCount = (int) sensorEvent.values[0];
             textViewStepCounter.setText(String.valueOf(stepCount));
+            double caloriesBurned = stepCount * 0.03;
+            textViewCaloriesBurned.setText("Calories burned: " + String.format("%.2f", caloriesBurned));
             resetStepsCount();
         }
     }

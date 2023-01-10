@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.foster.MusicActivity">
+    tools:context=".MusicActivity">
 
     <item
         android:id="@+id/nav_upload"
-        android:title="upload"
+        android:title="Upload"
         app:showAsAction="always"
         android:icon="@drawable/ic_baseline_upload_24"
         />

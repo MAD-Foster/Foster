@@ -3,6 +3,7 @@ package com.example.foster;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -20,6 +21,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ActionMenuView;
 
 import com.example.jean.jcplayer.model.JcAudio;
 import com.example.jean.jcplayer.view.JcPlayerView;
@@ -50,7 +52,7 @@ public class MusicActivity extends AppCompatActivity {
 
     private boolean checkPermission = false;
     Uri uri;
-    String songName,songUrl;
+    String songName, songUrl;
     ListView listView;
 
     ArrayList<String> arrayListSongsName = new ArrayList<>();
@@ -76,6 +78,7 @@ public class MusicActivity extends AppCompatActivity {
 
                 jcPlayerView.playAudio(jcAudios.get(position));
                 jcPlayerView.setVisibility(View.VISIBLE);
+                jcPlayerView.createNotification();
 
             }
         });
@@ -89,23 +92,22 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                for(DataSnapshot ds :dataSnapshot.getChildren()){
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
                     Song songObj = ds.getValue(Song.class);
                     arrayListSongsName.add(songObj.getSongName());
                     arrayListSongsUrl.add(songObj.getSongUrl());
                     jcAudios.add(JcAudio.createFromURL(songObj.getSongName(), songObj.getSongUrl()));
 
-
                 }
 
-                arrayAdapter = new ArrayAdapter<String>(MusicActivity.this, android.R.layout.simple_list_item_1, arrayListSongsName){
+                arrayAdapter = new ArrayAdapter<String>(MusicActivity.this, android.R.layout.simple_list_item_1, arrayListSongsName) {
 
                     @NonNull
                     @Override
                     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-                        View view = super.getView(position,convertView,parent);
+                        View view = super.getView(position, convertView, parent);
                         TextView textView = view.findViewById(android.R.id.text1);
 
                         textView.setSingleLine(true);
@@ -114,7 +116,7 @@ public class MusicActivity extends AppCompatActivity {
                         return view;
                     }
                 };
-                jcPlayerView.initPlaylist(jcAudios,null);
+                //jcPlayerView.initPlaylist(jcAudios,null);
                 listView.setAdapter(arrayAdapter);
 
             }
@@ -127,6 +129,14 @@ public class MusicActivity extends AppCompatActivity {
 
     }
 
+//    Toolbar toolbar = findViewById(R.id.toolbar);
+
+//    @Override
+//    public void setSupportActionBar(@Nullable Toolbar toolbar) {
+//        super.setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
+//    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_music, menu);
@@ -136,15 +146,18 @@ public class MusicActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        if(item.getItemId()==R.id.nav_upload){
-            pickSong();
+        if (item.getItemId() == R.id.nav_upload) {
+            if (validatePermission()) {
+                //pickSong();
+            }
+            ;
 
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    private void pickSong() {
+    public void pickSong(View view) {
 
         Intent intent_upload = new Intent();
         intent_upload.setType("audio/*");
@@ -156,12 +169,12 @@ public class MusicActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
-        if(requestCode==1){
-            if(requestCode == RESULT_OK){
+        if (requestCode == 1) {
+            if (requestCode == RESULT_OK) {
 
                 uri = data.getData();
 
-                Cursor mcursor = (Cursor) getApplicationContext().getContentResolver().query(uri,null,null,null,null);
+                Cursor mcursor = (Cursor) getApplicationContext().getContentResolver().query(uri, null, null, null, null);
 
                 int indexedname = mcursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
                 mcursor.moveToFirst();
@@ -189,13 +202,12 @@ public class MusicActivity extends AppCompatActivity {
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                 Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
-                while (!uriTask.isComplete());
+                while (!uriTask.isComplete()) ;
                 Uri urlSong = uriTask.getResult();
                 songUrl = urlSong.toString();
 
                 uploadDetailsToFirebase();
                 progressDialog.dismiss();
-
 
 
             }
@@ -211,7 +223,7 @@ public class MusicActivity extends AppCompatActivity {
             public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
                 double progress = (100.0 * snapshot.getBytesTransferred()) /
                         snapshot.getTotalByteCount();
-                int currentprogress = (int)progress;
+                int currentprogress = (int) progress;
                 progressDialog.setMessage("File" + currentprogress + "%" + "Uploaded");
             }
         });
@@ -220,14 +232,14 @@ public class MusicActivity extends AppCompatActivity {
 
     private void uploadDetailsToFirebase() {
 
-        Song songObj = new Song(songName,songUrl);
+        Song songObj = new Song(songName, songUrl);
 
         FirebaseDatabase.getInstance().getReference("Songs")
                 .push().setValue(songObj).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(MusicActivity.this,"Song Uploaded", Toast.LENGTH_SHORT).show();
+                        if (task.isSuccessful()) {
+                            Toast.makeText(MusicActivity.this, "Song Uploaded", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -239,7 +251,7 @@ public class MusicActivity extends AppCompatActivity {
 
     }
 
-    private boolean validatePermission(){
+    private boolean validatePermission() {
 
         Dexter.withActivity(MusicActivity.this)
                 .withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -260,7 +272,7 @@ public class MusicActivity extends AppCompatActivity {
                         permissionToken.continuePermissionRequest();
 
                     }
-                }) .check();
+                }).check();
         return checkPermission;
 
     }

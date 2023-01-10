@@ -15,6 +15,7 @@
         android:textAlignment="center"
         android:textColor="#7D4949"
         android:textSize="24sp"
+        android:elevation="2dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,6 +30,7 @@
         android:text="    Our workout app is designed to help people of all fitness levels achieve their health and fitness goals."
         android:textColor="#7D4949"
         android:textSize="16sp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
@@ -43,6 +45,7 @@
         android:text="    Whether you're just starting out on your fitness journey or are a seasoned athlete, our app offers a wide range of workouts, from beginner to advanced, to help you progress at your own pace."
         android:textColor="#7D4949"
         android:textSize="16sp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
@@ -57,6 +60,7 @@
         android:text="     Our team of certified trainers and nutritionists work together to create safe and effective workouts, along with personalized nutrition plans to help you reach your goals faster. "
         android:textColor="#7D4949"
         android:textSize="16sp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
@@ -71,6 +75,7 @@
         android:text="       We are committed to providing our users with the support and motivation they need to lead healthier, more active lives."
         android:textColor="#7D4949"
         android:textSize="16sp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -82,11 +87,12 @@
         android:id="@+id/imageView"
         android:layout_width="191dp"
         android:layout_height="178dp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toTopOf="@+id/TVJoinCommunity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fosterlogo" />
+        app:srcCompat="@drawable/logo_white" />
 
     <ImageView
         android:id="@+id/logoHouse"

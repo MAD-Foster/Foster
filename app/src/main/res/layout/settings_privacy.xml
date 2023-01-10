@@ -4,8 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".PrivacyFragment"
-    android:background="@color/black">
+    tools:context=".PrivacyFragment">
+
+    <ImageView
+        android:id="@+id/logoHouse"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:elevation="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_foster" />
 
     <TextView
         android:id="@+id/TVJoinCommunity4"
@@ -16,6 +27,7 @@
         android:textAlignment="center"
         android:textColor="#7D4949"
         android:textSize="24sp"
+        android:elevation="2dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +42,7 @@
         android:text="1. Introduction: We are committed to protecting your privacy and personal information. This privacy policy (the &quot;Policy&quot;) explains how we collect, use, and share information about you when you use our workout app (the &quot;App&quot;)."
         android:textColor="#7D4949"
         android:textSize="16sp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -44,6 +57,7 @@
         android:text="2. Information we collect: We may collect the following types of information about you when you use the App:"
         android:textColor="#7D4949"
         android:textSize="16sp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
@@ -58,6 +72,7 @@
         android:text="Device information: This includes information about the device you use to access the App, such as the hardware model, operating system and version, and unique device identifiers."
         android:textColor="#7D4949"
         android:textSize="16sp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.464"
@@ -72,6 +87,7 @@
         android:text="Usage information: This includes information about how you use the App, such as the features you access, the pages you visit, and the duration of your sessions."
         android:textColor="#7D4949"
         android:textSize="16sp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.464"
@@ -86,6 +102,7 @@
         android:text="Personal information: This includes information that can be used to identify you, such as your name, email address, and phone number."
         android:textColor="#7D4949"
         android:textSize="16sp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
@@ -98,8 +115,9 @@
         android:layout_width="191dp"
         android:layout_height="178dp"
         android:layout_marginTop="36dp"
+        android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fosterlogo" />
+        app:srcCompat="@drawable/logo_white" />
 </androidx.constraintlayout.widget.ConstraintLayout>

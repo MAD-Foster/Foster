@@ -25,6 +25,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".StepsPage"
 
             android:exported="false">
             <meta-data

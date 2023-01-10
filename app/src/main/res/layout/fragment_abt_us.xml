@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AbtUsFragment">
+    tools:context=".AboutUsActivity">
 
     <ImageView
         android:id="@+id/logoHouse2"
@@ -25,12 +25,12 @@
         android:id="@+id/imageView5"
         android:layout_width="191dp"
         android:layout_height="178dp"
-        android:layout_marginTop="28dp"
         android:elevation="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/TVJoinCommunity"
+        app:layout_constraintBottom_toBottomOf="@+id/logoHouse2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077"
         app:srcCompat="@drawable/logo_white" />
 
     <TextView

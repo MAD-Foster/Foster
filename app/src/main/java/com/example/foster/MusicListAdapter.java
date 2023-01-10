@@ -39,7 +39,7 @@ public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.View
         if(MyMediaPlayer.currentIndex==position){
             holder.titleTextView.setTextColor(Color.parseColor("#FF0000"));
         }else{
-            holder.titleTextView.setTextColor(Color.parseColor("#000000"));
+            holder.titleTextView.setTextColor(Color.parseColor("#FFFFFF"));
         }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

@@ -4,32 +4,33 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
@@ -37,6 +38,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
+
+
+    private FirebaseUser user;
+    private DatabaseReference reference;
+
+    private String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
         navigationView = findViewById(R.id.sideNavMain);
         navigationView.setItemIconTintList(null);
+
         navigationView.setNavigationItemSelectedListener(this);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -67,7 +75,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         i = new Intent(MainActivity.this, SettingsActivity.class);
                         startActivity(i);
                         return true;
-
                     case R.id.DestWorkoutPage:
                         i = new Intent(MainActivity.this, WorkoutActivity.class);
                         startActivity(i);
@@ -89,11 +96,50 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         });
         drawerLayout = findViewById(R.id.DLMain);
-//        drawerLayout = (DrawerLayout) navigationView.getRootView().findViewById(R.id.DLMain);
+        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
-
         toggle.syncState();
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("Users");
+        userID = user.getUid();
+
+        final TextView greetingTextView = (TextView) findViewById(R.id.greeting);
+        final TextView fullNameTextView = (TextView) findViewById(R.id.fullName);
+        final TextView emailTextView = (TextView) findViewById(R.id.emailAddress);
+        final TextView ageTextView = (TextView) findViewById(R.id.age);
+        final TextView heightTextView = (TextView) findViewById(R.id.height);
+        final TextView weightTextView = (TextView) findViewById(R.id.weight);
+
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User userProfile = snapshot.getValue(User.class);
+
+                if(userProfile != null){
+                    String fullName = userProfile.name;
+                    String email = userProfile.email;
+                    String age = userProfile.age;
+                    String weight = userProfile.weight;
+                    String height = userProfile.height;
+
+                    greetingTextView.setText("Welcome, " + fullName + "!");
+                    fullNameTextView.setText(fullName);
+                    emailTextView.setText(email);
+                    ageTextView.setText(age);
+                    weightTextView.setText(weight);
+                    heightTextView.setText(height);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(MainActivity.this, "Something wrong happened!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -146,12 +192,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent i = new Intent(MainActivity.this, WorkoutActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestStepsPage) {
-//            Intent i = new Intent(MainActivity.this, StepsActivity.class);
-//            startActivity(i);
+            Intent i = new Intent(MainActivity.this, StepsPage.class);
+            startActivity(i);
         }
 
 //        drawerLayout = findViewById(R.id.DLMain);
-        drawerLayout = (DrawerLayout) navigationView.getRootView().findViewById(R.id.DLMain);
+        drawerLayout = (DrawerLayout) navigationView.getRootView().findViewById(R.id.DLMusic);
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -169,22 +215,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_overflow, menu);
-        MenuItem logoutItem = menu.findItem(R.id.actionLogout);
-        logoutItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                return true;
-            }
-        });
+//        MenuItem logoutItem = menu.findItem(R.id.actionLogout);
+//        logoutItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(MenuItem item) {
+//                FirebaseAuth.getInstance().signOut();
+//                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+//                return true;
+//            }
+//        });
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
         System.out.println("overflow menu");
         Intent i;
+        // Handle item selection
         switch (item.getItemId()) {
             case R.id.DestHome:
                 i = new Intent(MainActivity.this, MainActivity.class);
@@ -202,23 +250,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 i = new Intent(MainActivity.this, MusicActivity.class);
                 startActivity(i);
                 break;
-            case R.id.DestStepsPage:
-//                Intent i = new Intent(MainActivity.this, StepsActivity.class);
-//                startActivity(i);
-                break;
             case R.id.actionLogout:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 return true;
+            case R.id.DestStepsPage:
+                startActivity(new Intent(MainActivity.this, StepsPage.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
+
+        }return super.onOptionsItemSelected(item);
+    }
+
 
         }
 //        if (toggle.onOptionsItemSelected(item)) {
 //            return true;
 //        }
-        return super.onOptionsItemSelected(item);
 
 
-    }
-}
+
+

@@ -1,9 +1,8 @@
 package com.example.foster;
 
 public class User {
-    public String firstName;
-    public String lastName;
-    public String email;
+    public String name, age, weight, height, email;
+
 
     public String getGender() {
         return gender;
@@ -18,9 +17,11 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String gender) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public User(String name, String age, String weight, String height, String email, String gender) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
         this.email = email;
         this.gender = gender;
     }

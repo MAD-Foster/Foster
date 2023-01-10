@@ -2,6 +2,7 @@ package com.example.foster;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -40,6 +41,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         register = (TextView) findViewById(R.id.register);
         register.setOnClickListener(this);
+
 
         signIn = (ImageView) findViewById(R.id.signIn);
         signIn.setOnClickListener(this);

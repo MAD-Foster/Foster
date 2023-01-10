@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/DestWorkoutPage"
+        app:labelVisibilityMode="labeled"
+        android:icon="@drawable/fitness_svgrepo_com"
+        android:title="Train" />
+
+
+    <item
+        android:id="@+id/DestMusicPage"
+        app:labelVisibilityMode="labeled"
+        android:icon="@drawable/ic_baseline_audiotrack_24"
+        android:title="@string/music_sidenav_title" />
+    <item
+        android:id="@+id/placeHolder"
+        android:clickable="false"
+        android:title="" />
+    <item
+        android:id="@+id/DestStepsPage"
+        app:labelVisibilityMode="labeled"
+        android:icon="@drawable/ic_baseline_directions_run_24"
+        android:title="@string/steps_sidenav_title" />
+    <item
+        android:id="@+id/DestSettings"
+        app:labelVisibilityMode="labeled"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/acc_settings_title" />
+</menu>

@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "183060155622",
-    "project_id": "musicstream-d3807",
-    "storage_bucket": "musicstream-d3807.appspot.com"
+    "project_number": "547572439443",
+    "firebase_url": "https://auth-b5fc6-default-rtdb.firebaseio.com",
+    "project_id": "auth-b5fc6",
+    "storage_bucket": "auth-b5fc6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:183060155622:android:0c390c3b9f36b7b1d17f27",
+        "mobilesdk_app_id": "1:547572439443:android:cedc33bbe040b605a3b066",
         "android_client_info": {
           "package_name": "com.example.foster"
         }
       },
       "oauth_client": [
         {
-          "client_id": "183060155622-ue7f9l4urhv9nv78920rr361vmhumomc.apps.googleusercontent.com",
+          "client_id": "547572439443-2pp0s7j97eeg7q0vc9a9g128fbmtd26a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC5VLATD0OBKPpbS4OFp6fIneUbTIQuXLY"
+          "current_key": "AIzaSyDdZySGUXRxmmslLii5GTaD_ji70CqiJ2g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "183060155622-ue7f9l4urhv9nv78920rr361vmhumomc.apps.googleusercontent.com",
+              "client_id": "547572439443-2pp0s7j97eeg7q0vc9a9g128fbmtd26a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/DLMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkoutActivity">
+
+
+    <!--    <com.google.android.material.navigation.NavigationView-->
+    <!--        android:id="@+id/sideNav"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="start"-->
+    <!--        app:headerLayout="@layout/nav_header"-->
+    <!--        app:itemTextColor="@color/white"-->
+    <!--        android:background="@color/dark_maroon"-->
+    <!--        app:menu="@menu/menu_side"-->
+    <!--        />-->
+
+    <!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/imageView3"-->
+    <!--            android:layout_width="427dp"-->
+    <!--            android:layout_height="936dp"-->
+    <!--            android:adjustViewBounds="true"-->
+    <!--            android:scaleType="fitXY"-->
+    <!--            app:srcCompat="@drawable/bg_foster" />-->
+
+
+    <!--        <androidx.appcompat.widget.Toolbar-->
+    <!--            android:id="@+id/TBMainAct"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@color/black"-->
+    <!--            app:titleTextColor="@color/black"-->
+    <!--            app:menu="@menu/menu_overflow"/>-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="bottom"-->
+    <!--            android:adjustViewBounds="true"-->
+    <!--            android:alpha="0.7"-->
+    <!--            android:scaleType="fitXY"-->
+    <!--            android:src="@drawable/wave_red" />-->
+
+    <!--        <com.google.android.material.bottomappbar.BottomAppBar-->
+    <!--            android:id="@+id/bottomAppBar"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="bottom"-->
+    <!--            android:background="#EB0000"-->
+    <!--            app:backgroundTint="@color/maroon"-->
+    <!--            app:fabCradleMargin="10dp"-->
+    <!--            app:fabCradleRoundedCornerRadius="10dp"-->
+    <!--            app:fabCradleVerticalOffset="10dp">-->
+
+    <!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--                android:id="@+id/bottom_nav_view"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginRight="16dp"-->
+    <!--                android:background="@drawable/transparent_background"-->
+    <!--                app:backgroundTint="#1D0202"-->
+    <!--                app:menu="@menu/menu_bottom" />-->
+    <!--        </com.google.android.material.bottomappbar.BottomAppBar>-->
+
+
+    <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--            android:id="@+id/fab"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:labelVisibilityMode="labeled"-->
+    <!--            android:backgroundTint="@color/maroon"-->
+    <!--            android:src="@drawable/ic_baseline_home_24"-->
+    <!--            app:layout_anchor="@id/bottomAppBar" />-->
+
+    <!--        <TableLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <TableRow-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent" />-->
+
+    <!--            <TableRow-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent" />-->
+
+    <!--            <TableRow-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent" />-->
+
+    <!--            <TableRow-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent" />-->
+    <!--        </TableLayout>-->
+
+
+    <!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="50dp"
+            android:text="Choose your program:"
+            android:textSize="25sp"
+            android:textStyle="italic|bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:scrollY="500dp"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="0dp">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:src="@drawable/ic_baseline_image_24" />
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:src="@drawable/ic_baseline_image_24" />
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:src="@drawable/ic_baseline_image_24" />
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:src="@drawable/ic_baseline_image_24" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

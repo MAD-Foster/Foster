@@ -8,6 +8,19 @@
     tools:context=".MusicActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="412dp"
+        android:layout_height="895dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_foster" />
+
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -75,6 +88,18 @@
             android:src="@drawable/ic_baseline_home_24"
             app:layout_anchor="@id/bottomAppBar" />
 
+        <TextView
+            android:id="@+id/songs_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:fontFamily="serif"
+            android:text="@string/music_title"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <!--    <androidx.fragment.app.FragmentContainerView-->
@@ -94,6 +119,7 @@
         android:id="@+id/sideNavMusic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
         app:itemTextColor="@color/white"
@@ -102,4 +128,37 @@
         app:menu="@menu/menu_side"
         />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/no_songs_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/songs_text"
+            android:text="NO SONGS FOUND"
+            android:visibility="gone"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+
+

@@ -24,10 +24,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView registerUser;
-    private EditText editTextFirstName, editTextLastName, editTextAge, editTextWeight, editTextEmail, editTextPassword;
+    private Button registerUser;
+    private EditText editTextName, editTextHeight, editTextAge, editTextWeight, editTextEmail, editTextPassword;
     private ProgressBar progressbar;
     private RadioGroup radioGroup;
+    private TextView textViewLoginNow;
 
 
     private FirebaseAuth mAuth;
@@ -45,12 +46,16 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
         registerUser = (Button) findViewById(R.id.registerUser);
         registerUser.setOnClickListener(this);
-        editTextFirstName = (EditText) findViewById(R.id.firstName);
-        editTextLastName = (EditText) findViewById(R.id.lastName);
+        editTextName = (EditText) findViewById(R.id.name);
+        editTextHeight = (EditText) findViewById(R.id.height);
         editTextAge = (EditText) findViewById(R.id.age);
         editTextWeight = (EditText) findViewById(R.id.weight);
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
+
+        textViewLoginNow = (TextView) findViewById(R.id.loginNow);
+        textViewLoginNow.setOnClickListener(this);
+
 
 
         radioGroup = findViewById(R.id.genderRadioGroup);
@@ -77,8 +82,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         String password = editTextPassword.getText().toString().trim();
         String weight = editTextWeight.getText().toString().trim();
         String age = editTextAge.getText().toString().trim();
-        String firstName = editTextFirstName.getText().toString().trim();
-        String lastName = editTextLastName.getText().toString().trim();
+        String name = editTextName.getText().toString().trim();
+        String height = editTextHeight.getText().toString().trim();
 
         int selectedId = radioGroup.getCheckedRadioButtonId();
         RadioButton selectedRadioButton = findViewById(selectedId);
@@ -86,27 +91,27 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
 
 
-        if(firstName.isEmpty()) {
-            editTextFirstName.setError("First name is required!");
-            editTextFirstName.requestFocus();
+        if(name.isEmpty()) {
+            editTextName.setError("Name is required!");
+            editTextName.requestFocus();
             return;
         }
 
-        if(lastName.isEmpty()) {
-            editTextLastName.setError("Last name is required!");
-            editTextLastName.requestFocus();
+        if(height.isEmpty()) {
+            editTextHeight.setError("Height is required!");
+            editTextHeight.requestFocus();
             return;
         }
 
         if(age.isEmpty()) {
-            editTextLastName.setError("Age is required!");
-            editTextLastName.requestFocus();
+            editTextHeight.setError("Age is required!");
+            editTextHeight.requestFocus();
             return;
         }
 
         if(weight.isEmpty()) {
-            editTextLastName.setError("Weight is required!");
-            editTextLastName.requestFocus();
+            editTextHeight.setError("Weight is required!");
+            editTextHeight.requestFocus();
             return;
         }
 
@@ -140,7 +145,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
-                            User user = new User(firstName, lastName, age, weight, email, gender);
+                            User user = new User(name, height, age, weight, email, gender);
                             user.setGender(gender);
 
 

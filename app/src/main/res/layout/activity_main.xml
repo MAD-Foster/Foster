@@ -7,6 +7,118 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintToptoTopOf="parent"
+        app:layout_constraintLefttoLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/emailAddressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Email Address:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLefttoLeftOf="@+id/greeting"
+        app:layout_constraintToptoBottomOf="@+id/greeting" />
+
+    <TextView
+        android:id="@+id/emailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        app:layout_constraintLefttoLeftOf="@+id/emailAddressTitle"
+        app:layout_constraintToptoBottomOf="@+id/emailAddressTitle" />
+
+    <TextView
+        android:id="@+id/fullNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name:"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        app:layout_constraintLefttoLeftOf="@+id/greeting"
+        app:layout_constraintToptoBottomOf="@+id/emailAddress" />
+
+    <TextView
+        android:id="@+id/fullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        app:layout_constraintLefttoLeftOf="@+id/emailAddressTitle"
+        app:layout_constraintToptoBottomOf="@+id/fullNameTitle" />
+
+    <TextView
+        android:id="@+id/ageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age:"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        app:layout_constraintLefttoLeftOf="@+id/fullNameTitle"
+        app:layout_constraintToptoBottomOf="@+id/fullName" />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        app:layout_constraintLefttoLeftOf="@+id/emailAddressTitle"
+        app:layout_constraintToptoBottomOf="@+id/ageTitle" />
+
+    <TextView
+        android:id="@+id/weightTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight:"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        app:layout_constraintLefttoLeftOf="@+id/ageTitle"
+        app:layout_constraintToptoBottomOf="@+id/age" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        app:layout_constraintLefttoLeftOf="@+id/ageTitle"
+        app:layout_constraintToptoBottomOf="@+id/weightTitle" />
+
+    <TextView
+        android:id="@+id/heightTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height:"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        app:layout_constraintLefttoLeftOf="@+id/weightTitle"
+        app:layout_constraintToptoBottomOf="@+id/weight" />
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        app:layout_constraintLefttoLeftOf="@+id/weightTitle"
+        app:layout_constraintToptoBottomOf="@+id/heightTitle" />
+
 
 
 
@@ -73,6 +185,8 @@
         android:backgroundTint="@color/maroon"
         android:src="@drawable/ic_baseline_home_24"
         app:layout_anchor="@id/bottomAppBar" />
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

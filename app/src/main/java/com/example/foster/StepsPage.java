@@ -128,6 +128,7 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener 
         if(sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null) {
             sensorManager.registerListener(this, mStepCounter, SensorManager.SENSOR_DELAY_NORMAL);
         }
+        resetStepsCount();
     }
 
     @Override

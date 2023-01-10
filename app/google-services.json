@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "547572439443",
+    "firebase_url": "https://auth-b5fc6-default-rtdb.firebaseio.com",
+    "project_id": "auth-b5fc6",
+    "storage_bucket": "auth-b5fc6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547572439443:android:cedc33bbe040b605a3b066",
+        "android_client_info": {
+          "package_name": "com.example.foster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547572439443-2pp0s7j97eeg7q0vc9a9g128fbmtd26a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdZySGUXRxmmslLii5GTaD_ji70CqiJ2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547572439443-2pp0s7j97eeg7q0vc9a9g128fbmtd26a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

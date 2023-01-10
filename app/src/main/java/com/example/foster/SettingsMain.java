@@ -3,32 +3,76 @@ package com.example.foster;
 import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SettingsMain extends AppCompatActivity {
+import org.w3c.dom.Text;
 
-    String storagepath = "Users_Profile_Cover_image/";
-    String uid;
-    ImageView set;
-    TextView profilepic, editname, editpassword;
-    ProgressDialog pd;
-    private static final int CAMERA_REQUEST = 100;
-    private static final int STORAGE_REQUEST = 200;
-    private static final int IMAGEPICK_GALLERY_REQUEST = 300;
-    private static final int IMAGE_PICKCAMERA_REQUEST = 400;
-    String cameraPermission[];
-    String storagePermission[];
-    Uri imageuri;
-    String profileOrCoverPhoto;
+public class SettingsMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_main);
 
+        TextView txt = findViewById(R.id.editname);
+
+        txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        TextView txt2 = findViewById(R.id.changepassword);
+
+        txt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        TextView txt3 = findViewById(R.id.details);
+
+        txt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        TextView txt4 = findViewById(R.id.aboutUs);
+
+        txt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        TextView txt5 = findViewById(R.id.TVPrivacy);
+
+        txt5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        TextView txt6 = findViewById(R.id.TVtnc);
+
+        txt5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
+
+
 }
 

@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.143" />
 
     <TextView
-        android:id="@+id/profilepic"
+        android:id="@+id/details"
         android:layout_width="236dp"
         android:layout_height="26dp"
         android:text="Update Details                              >"
@@ -148,17 +148,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.691" />
-
-    <ImageView
-        android:id="@+id/logoHouse"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:elevation="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg_foster" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

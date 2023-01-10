@@ -17,7 +17,7 @@
     <string name="music_sidenav_title">Music</string>
     <string name="steps_sidenav_title">Steps</string>
     <string name="muscle_building">MUSCLE BUILDINGS</string>
-
+    <string name="register_button"><u>Register ?</u></string>
     <string name="navigation_drawer_open">More</string>
     <string name="navigation_drawer_close">Close</string>
 

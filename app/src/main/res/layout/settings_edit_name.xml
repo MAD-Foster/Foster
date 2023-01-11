@@ -4,6 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:adjustViewBounds="true"
+        android:alpha="0.7"
+        android:scaleType="fitXY"
+        android:elevation="1dp"
+        android:src="@drawable/wave_red" />
     <ImageView
         android:id="@+id/logoHouse"
         android:layout_width="fill_parent"
@@ -33,8 +45,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        android:textColor="@color/white"
-
+        android:textColor="#932B40"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -49,8 +60,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        android:textColor="@color/white"
-
+        android:textColor="#932B40"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,9 +72,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UPDATE NAME"
-        android:textColor="@color/white"
-
+        android:textColor="#932B40"
         android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -105,10 +115,10 @@
         android:id="@+id/submitButton"
         android:layout_width="177dp"
         android:layout_height="52dp"
-        android:background="@color/black"
-        android:backgroundTint="#971F3C"
+        android:backgroundTint="#932B40"
         android:text="CONFIRM"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

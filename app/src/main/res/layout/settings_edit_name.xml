@@ -86,7 +86,7 @@
         android:id="@+id/submitButton"
         android:layout_width="177dp"
         android:layout_height="52dp"
-        android:backgroud="@color/black"
+        android:background="@color/black"
         android:backgroundTint="#971F3C"
         android:text="CONFIRM"
         app:layout_constraintBottom_toBottomOf="parent"

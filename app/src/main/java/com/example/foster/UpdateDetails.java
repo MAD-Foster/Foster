@@ -1,9 +1,10 @@
 package com.example.foster;
 
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-package com.example.socialmediaapp;
 
 import android.Manifest;
 import android.app.Activity;
@@ -69,6 +70,7 @@ public class UpdateDetails extends AppCompatActivity {
     Uri imageuri;
     String profileOrCoverPhoto;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -177,7 +179,9 @@ public class UpdateDetails extends AppCompatActivity {
 
     // requesting for storage permission
     private void requestStoragePermission() {
-        requestPermissions(storagePermission, STORAGE_REQUEST);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(storagePermission, STORAGE_REQUEST);
+        }
     }
 
     // checking camera permission ,if given then we can click image using our camera
@@ -189,7 +193,9 @@ public class UpdateDetails extends AppCompatActivity {
 
     // requesting for camera permission if not given
     private void requestCameraPermission() {
-        requestPermissions(cameraPermission, CAMERA_REQUEST);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(cameraPermission, CAMERA_REQUEST);
+        }
     }
 
     // Here we are showing image pic dialog where we will select

@@ -1,17 +1,39 @@
 package com.example.foster;
 
+import static com.example.foster.R.id.editTextTextPersonName;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.ContentResolver;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.IntentSender;
+import android.content.ServiceConnection;
+import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.database.DatabaseErrorHandler;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.UserHandle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -42,9 +64,48 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 
-public class SettingsName {
+public class SettingsName extends AppCompatActivity {
+
+
+    private FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+    String uid;
+    EditText editname;
+    ProgressDialog pd;
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.settings_edit_name);
+
+        editname = findViewById(R.id.editTextTextPersonName);
+
+        pd = new ProgressDialog(this);
+        pd.setCanceledOnTouchOutside(false);
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("Users");
+
+        editname.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pd.setMessage("Updating Name");
+                showNamephoneupdate("name");
+            }
+        });
+    }
+
+    // Updating name
     private void showNamephoneupdate(final String key) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Update" + key);
@@ -74,13 +135,13 @@ public class SettingsName {
                             pd.dismiss();
 
                             // after updated we will show updated
-                            Toast.makeText(EditProfilePage.this, " updated ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SettingsName.this, " updated ", Toast.LENGTH_LONG).show();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             pd.dismiss();
-                            Toast.makeText(EditProfilePage.this, "Unable to update", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SettingsName.this, "Unable to update", Toast.LENGTH_LONG).show();
                         }
                     });
                     if (key.equals("name")) {
@@ -102,7 +163,7 @@ public class SettingsName {
                         });
                     }
                 } else {
-                    Toast.makeText(EditProfilePage.this, "Unable to update", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SettingsName.this, "Unable to update", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -115,4 +176,6 @@ public class SettingsName {
         });
         builder.create().show();
     }
+
 }
+

@@ -200,7 +200,10 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
             case R.id.IV4:
                 condition = 4;
                 break;
-
+            case R.id.fabWorkout:
+                Intent i = new Intent(WorkoutActivity.this, MainActivity.class);
+                startActivity(i);
+                break;
 
         }
         Intent i = new Intent(WorkoutActivity.this, SpecificExerciseActivity.class);

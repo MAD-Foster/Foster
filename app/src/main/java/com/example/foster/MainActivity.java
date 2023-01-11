@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         System.out.println("fab");
         System.out.println("fab");
 
-        if (v.getId() == R.id.fab) {
+        if (v.getId() == R.id.fabMain) {
             Intent i = new Intent(MainActivity.this, MainActivity.class);
             startActivity(i);
         }

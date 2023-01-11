@@ -1,193 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/DLSteps"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StepsPage">
-    <ImageView
-        android:id="@+id/fosterLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:elevation="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_white" />
 
-    <ImageView
-        android:id="@+id/logoHouse"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:adjustViewBounds="true"
-        android:elevation="1dp"
-        android:gravity="center"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/bg_foster" />
 
-    <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:adjustViewBounds="true"
-        android:alpha="0.7"
-        android:scaleType="fitXY"
-        android:elevation="1dp"
-        android:src="@drawable/wave_red" />
+        android:layout_height="match_parent">
+<!--        <ImageView-->
+<!--            android:id="@+id/fosterLogo"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:elevation="2dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@drawable/logo_white" />-->
 
-    <ImageView
-        android:id="@+id/circleIcon"
+        <ImageView
+            android:id="@+id/logoHouse"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/bg_foster" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:adjustViewBounds="true"
+            android:alpha="0.7"
+            android:scaleType="fitXY"
+            android:elevation="1dp"
+            android:src="@drawable/wave_red" />
+
+        <ImageView
+            android:id="@+id/circleIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:elevation="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circle" />
+
+        <ImageView
+            android:id="@+id/goalsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="430dp"
+            android:elevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/goals_logo" />
+
+        <ImageView
+            android:id="@+id/remainingIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="50dp"
+            android:elevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goalsIcon"
+            app:srcCompat="@drawable/remaining_logo" />
+
+        <ImageView
+            android:id="@+id/caloriesIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="73dp"
+            android:layout_marginTop="50dp"
+            android:elevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/remainingIcon"
+            app:srcCompat="@drawable/calories_logo" />
+
+        <TextView
+            android:id="@+id/totalStepCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="558dp"
+            android:layout_marginStart="30dp"
+            android:text="Total Step Counter"
+            android:textColor="#FFFFFF"
+            android:elevation="2dp"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/remainingIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/stepCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step Counter"
+            android:textColor="#FFFFFF"
+            android:elevation="2dp"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@id/circleIcon"
+            app:layout_constraintStart_toStartOf="@id/circleIcon"
+            app:layout_constraintBottom_toBottomOf="@id/circleIcon"
+            app:layout_constraintTop_toTopOf="@id/circleIcon" />
+
+        <TextView
+            android:id="@+id/stepDetector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Step Detector"
+            android:textColor="#FFFFFF"
+            android:elevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp"
+            android:layout_marginStart="30dp"
+            android:text="GOAL"
+            android:textStyle="bold|italic"
+            android:textColor="#FF5353"
+            android:elevation="2dp"
+            android:textSize="25dp"
+            app:layout_constraintStart_toEndOf="@+id/goalsIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Title1info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="460dp"
+            android:layout_marginStart="30dp"
+            android:text="10,000 steps per day"
+            android:textColor="#FFFFFF"
+            android:elevation="2dp"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/goalsIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="520dp"
+            android:layout_marginStart="30dp"
+            android:text="TOTAL STEPS"
+            android:textStyle="bold|italic"
+            android:textColor="#FF5353"
+            android:elevation="2dp"
+            android:textSize="25dp"
+            app:layout_constraintStart_toEndOf="@+id/remainingIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="620dp"
+            android:layout_marginStart="27dp"
+            android:text="CALORIES BURNED"
+            android:textStyle="bold|italic"
+            android:textColor="#FF5353"
+            android:elevation="2dp"
+            android:textSize="25dp"
+            app:layout_constraintStart_toEndOf="@+id/caloriesIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Title3info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="660dp"
+            android:layout_marginStart="30dp"
+            android:text="Calories burned \n(0.03 x steps)"
+            android:textColor="#FFFFFF"
+            android:elevation="2dp"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/caloriesIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/TBStepsAct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:menu="@menu/menu_overflow"
+            app:titleTextColor="@color/black" />
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#EB0000"
+            app:backgroundTint="@color/maroon"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="10dp"
+            app:fabCradleVerticalOffset="10dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_nav_view_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/transparent_background"
+                app:backgroundTint="#1D0202"
+                app:itemIconTint="@drawable/bottom_nav_selector"
+                app:menu="@menu/menu_bottom" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/maroon"
+            android:src="@drawable/ic_baseline_home_24"
+            app:labelVisibilityMode="labeled"
+            app:layout_anchor="@id/bottomAppBar"
+            app:tint="@color/black" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/sideNavSteps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:elevation="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/circle" />
-
-    <ImageView
-        android:id="@+id/goalsIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="430dp"
-        android:elevation="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/goals_logo" />
-
-    <ImageView
-        android:id="@+id/remainingIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="50dp"
-        android:elevation="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goalsIcon"
-        app:srcCompat="@drawable/remaining_logo" />
-
-    <ImageView
-        android:id="@+id/caloriesIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="50dp"
-        android:elevation="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/remainingIcon"
-        app:srcCompat="@drawable/calories_logo" />
-
-    <TextView
-        android:id="@+id/totalStepCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="558dp"
-        android:layout_marginStart="30dp"
-        android:text="Total Step Counter"
-        android:textColor="#FFFFFF"
-        android:elevation="2dp"
-        android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/remainingIcon"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/stepCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Step Counter"
-        android:textColor="#FFFFFF"
-        android:elevation="2dp"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@id/circleIcon"
-        app:layout_constraintStart_toStartOf="@id/circleIcon"
-        app:layout_constraintBottom_toBottomOf="@id/circleIcon"
-        app:layout_constraintTop_toTopOf="@id/circleIcon" />
-
-    <TextView
-        android:id="@+id/stepDetector"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Step Detector"
-        android:textColor="#FFFFFF"
-        android:elevation="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/Title1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
-        android:layout_marginStart="30dp"
-        android:text="GOAL"
-        android:textStyle="bold|italic"
-        android:textColor="#FF5353"
-        android:elevation="2dp"
-        android:textSize="25dp"
-        app:layout_constraintStart_toEndOf="@+id/goalsIcon"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Title1info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="460dp"
-        android:layout_marginStart="30dp"
-        android:text="10,000 steps per day"
-        android:textColor="#FFFFFF"
-        android:elevation="2dp"
-        android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/goalsIcon"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="520dp"
-        android:layout_marginStart="30dp"
-        android:text="TOTAL STEPS"
-        android:textStyle="bold|italic"
-        android:textColor="#FF5353"
-        android:elevation="2dp"
-        android:textSize="25dp"
-        app:layout_constraintStart_toEndOf="@+id/remainingIcon"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Title3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="620dp"
-        android:layout_marginStart="27dp"
-        android:text="CALORIES BURNED"
-        android:textStyle="bold|italic"
-        android:textColor="#FF5353"
-        android:elevation="2dp"
-        android:textSize="25dp"
-        app:layout_constraintStart_toEndOf="@+id/caloriesIcon"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Title3info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="660dp"
-        android:layout_marginStart="30dp"
-        android:text="Calories burned \n(0.03 x steps)"
-        android:textColor="#FFFFFF"
-        android:elevation="2dp"
-        android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/caloriesIcon"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="start"
+        android:background="@color/dark_maroon"
+        app:headerLayout="@layout/nav_header"
+        app:itemIconTint="@null"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_side" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

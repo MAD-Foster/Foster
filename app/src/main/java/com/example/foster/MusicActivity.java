@@ -153,7 +153,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
         System.out.println("fab");
         System.out.println("fab");
 
-        if (v.getId() == R.id.fab) {
+        if (v.getId() == R.id.fabMusic) {
             Intent i = new Intent(MusicActivity.this, MainActivity.class);
             startActivity(i);
         }

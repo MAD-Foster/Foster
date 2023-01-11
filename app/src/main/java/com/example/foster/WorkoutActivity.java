@@ -48,7 +48,7 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
 
         Toolbar toolbar = findViewById(R.id.TBWorkoutAct);
         setSupportActionBar(toolbar);
-        navigationView = findViewById(R.id.sideNav);
+        navigationView = findViewById(R.id.sideNavWorkout);
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -155,7 +155,7 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
 //        Fragment fragmentExpert = new ExpertFragment();
 //        Fragment fragmentFatLoss = new FatLossFragment();
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fabWorkout);
         switch (v.getId()) {
             case R.id.IV1:
                 condition = 1;

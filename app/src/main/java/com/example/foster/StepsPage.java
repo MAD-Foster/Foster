@@ -10,6 +10,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -29,24 +31,35 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.GenericTypeIndicator;
+import com.google.firebase.database.MutableData;
+import com.google.firebase.database.Transaction;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 public class StepsPage extends AppCompatActivity implements SensorEventListener,View.OnClickListener,NavigationView.OnNavigationItemSelectedListener {
-    private TextView textViewStepCounter, textViewStepDetector, textViewTotalStepsCounter;
+    private TextView textViewStepCounter, textViewStepDetector, textViewTotalStepsLeftCounter;
+
     private TextView textViewCaloriesBurned;
 
     private SensorManager sensorManager;
     private Sensor mStepCounter;
     private boolean isCounterSensorPresent;
+    private DatabaseReference ref;
+
+    private SharedPreferences sharedPreferences;
     int stepCount = 0;
 
     BottomNavigationView bottomNavigationView;
@@ -59,8 +72,29 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_steps_page);
 
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED) { //ask for permission
+//<<<<<<< HEAD
+//        if (ContextCompat.checkSelfPermission(this,
+//                Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED) { //ask for permission
+//=======
+        sharedPreferences = getPreferences(Context.MODE_PRIVATE);
+
+        FirebaseApp.initializeApp(this);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("users").child(user.getUid()).child("step_count");
+
+        ref.setValue(stepCount);
+        // Initialize views
+        textViewStepCounter = findViewById(R.id.stepCounter);
+        textViewStepDetector = findViewById(R.id.stepDetector);
+        textViewTotalStepsLeftCounter = findViewById(R.id.totalStepLeftCounter);
+        textViewCaloriesBurned = findViewById(R.id.caloriesBurned);
+
+        TextView totalStepLeftCounter = findViewById(R.id.totalStepLeftCounter);
+        totalStepLeftCounter.setText("Steps left: 10000");
+
+        if(ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED){ //ask for permission
+//>>>>>>> jj
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 requestPermissions(new String[]{Manifest.permission.ACTIVITY_RECOGNITION}, 0);
             }
@@ -120,52 +154,50 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener,
 
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        textViewStepCounter = findViewById(R.id.stepCounter);
-        textViewStepDetector = findViewById(R.id.stepDetector);
-        textViewTotalStepsCounter = findViewById(R.id.totalStepCounter);
-        textViewCaloriesBurned = findViewById(R.id.caloriesBurned);
-
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-
-        if (sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null) {
-            mStepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-            isCounterSensorPresent = true;
-        } else {
-            textViewStepCounter.setText("Counter Sensor is not Present");
-            isCounterSensorPresent = false;
-        }
-
-
-        // create a new database reference
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("steps");
-
-        // create a new child location for the current day
-        String key = ref.push().getKey();
-        DatabaseReference dayRef = ref.child(key);
-
-        // store the step count data for the current day
-        dayRef.setValue(stepCount);
-
-        // attach a value event listener to the reference
-        ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // get the step count data from the snapshot
-                HashMap<String, Integer> stepCountMap = dataSnapshot.getValue(new GenericTypeIndicator<HashMap<String, Integer>>() {
-                });
-
-                // update the UI with the step count
-                textViewTotalStepsCounter.setText(String.valueOf(stepCountMap.get("stepCountKey")));
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-
+//<<<<<<< HEAD
+//
+//        if (sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null) {
+//            mStepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+//            isCounterSensorPresent = true;
+//        } else {
+//            textViewStepCounter.setText("Counter Sensor is not Present");
+//            isCounterSensorPresent = false;
+//        }
+//
+//
+//        // create a new database reference
+//        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("steps");
+//
+//        // create a new child location for the current day
+//        String key = ref.push().getKey();
+//        DatabaseReference dayRef = ref.child(key);
+//
+//        // store the step count data for the current day
+//        dayRef.setValue(stepCount);
+//
+//        // attach a value event listener to the reference
+//        ref.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                // get the step count data from the snapshot
+//                HashMap<String, Integer> stepCountMap = dataSnapshot.getValue(new GenericTypeIndicator<HashMap<String, Integer>>() {
+//                });
+//
+//                // update the UI with the step count
+//                textViewTotalStepsCounter.setText(String.valueOf(stepCountMap.get("stepCountKey")));
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
+//
+//
+//=======
+//>>>>>>> jj
     }
 
     @Override
@@ -175,9 +207,29 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener,
             textViewStepCounter.setText(String.valueOf(stepCount));
             double caloriesBurned = stepCount * 0.03;
             textViewCaloriesBurned.setText("Calories burned: " + String.format("%.2f", caloriesBurned));
+            int totalStepsLeft = 10000 - stepCount;
+            textViewTotalStepsLeftCounter.setText("Steps left: " + totalStepsLeft);
+
+            // Get the current date
+            Date currentDate = Calendar.getInstance().getTime();
+
+            // Get the date the step count was last updated
+            String dateString = sharedPreferences.getString("last_update_date", null);
+            Date lastUpdateDate = new Date();
+            if (dateString != null) {
+                try {
+                    lastUpdateDate = new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+
             resetStepsCount();
         }
     }
+
+
+
 
     private void resetStepsCount() {
         Calendar now = Calendar.getInstance();

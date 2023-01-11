@@ -84,12 +84,12 @@
         app:srcCompat="@drawable/calories_logo" />
 
     <TextView
-        android:id="@+id/totalStepCounter"
+        android:id="@+id/totalStepLeftCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="558dp"
         android:layout_marginStart="30dp"
-        android:text="Total Step Counter"
+        android:text="Total Step Left"
         android:textColor="#FFFFFF"
         android:elevation="2dp"
         android:textSize="20dp"
@@ -154,7 +154,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="520dp"
         android:layout_marginStart="30dp"
-        android:text="TOTAL STEPS"
+        android:text="TOTAL STEPS LEFT"
         android:textStyle="bold|italic"
         android:textColor="#FF5353"
         android:elevation="2dp"

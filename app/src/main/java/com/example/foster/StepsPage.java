@@ -80,6 +80,13 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null){
+            mStepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+            isCounterSensorPresent = true;
+        }else{
+            textViewStepCounter.setText("Counter Sensor is not Present");
+            isCounterSensorPresent = false;
+        }
     }
 
     @Override

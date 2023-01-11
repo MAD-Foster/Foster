@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bg_foster"
     tools:context=".SettingsMain">
 
     <TextView
@@ -15,7 +16,7 @@
         android:layout_height="26dp"
         android:text="About Us                                       >"
         android:textAlignment="inherit"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:text="username"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +56,7 @@
         android:layout_height="26dp"
         android:text="Update Details                              >"
         android:textAlignment="inherit"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +71,7 @@
         android:layout_height="26dp"
         android:text="Privacy Policy                               >"
         android:textAlignment="inherit"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +86,7 @@
         android:layout_height="26dp"
         android:text="Terms and Condition                   >"
         android:textAlignment="inherit"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +102,7 @@
         android:layout_marginTop="136dp"
         android:text="Update Name                                >"
         android:textAlignment="inherit"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
@@ -114,7 +115,7 @@
         android:layout_height="26dp"
         android:text="Update Password                         >"
         android:textAlignment="inherit"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,6 +129,7 @@
         android:layout_width="236dp"
         android:layout_height="26dp"
         android:text="Account Settings"
+        android:textColor="#E2D7D7"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -141,6 +143,7 @@
         android:layout_width="236dp"
         android:layout_height="26dp"
         android:text="More"
+        android:textColor="#E7DEDE"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -148,5 +151,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.691" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo_white"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

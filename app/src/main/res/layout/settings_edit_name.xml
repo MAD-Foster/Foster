@@ -26,6 +26,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bg_foster" />
+<!--=======-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@drawable/bg_foster">-->
+<!--&gt;>>>>>> subbranch-->
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/setting_profile_image3"
@@ -38,58 +42,85 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.17" />
 
+    <!--=======-->
+<!--&gt;>>>>>> subbranch-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.496"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.549" />-->
+
+    <!--=======-->
+<!--&gt;>>>>>> subbranch-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.707" />-->
+
+    <!--=======-->
+<!--        android:textColor="@color/white"-->
+<!--&gt;>>>>>> subbranch-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.423" />-->
+
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="272dp"
         android:layout_height="48dp"
+        android:layout_marginTop="21dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Name"
         android:textColor="#932B40"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColorHint="@color/dark_maroon"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.549" />
+        app:layout_constraintTop_toBottomOf="@+id/TVEnterName" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="272dp"
         android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Name"
+        android:textColorHint="@color/dark_maroon"
         android:textColor="#932B40"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707" />
+        app:layout_constraintTop_toBottomOf="@+id/TVEnterName2" />
 
     <TextView
         android:id="@+id/TVUpdateName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="UPDATE NAME"
         android:textColor="#932B40"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
+        app:layout_constraintTop_toBottomOf="@+id/setting_profile_image3" />
 
     <TextView
         android:id="@+id/TVEnterName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PLEASE ENTER YOUR FIRST NAME"
+        android:textColor="#E2D7D7"
         android:textStyle="bold"
-        android:textColor="@color/white"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -102,14 +133,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PLEASE ENTER YOUR LAST NAME"
+        android:textColor="#E1D6D6"
         android:textStyle="bold"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.635" />
+        app:layout_constraintVertical_bias="0.615" />
 
     <Button
         android:id="@+id/submitButton"
@@ -124,6 +155,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.825" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

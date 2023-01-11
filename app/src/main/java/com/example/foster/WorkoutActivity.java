@@ -169,9 +169,7 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
             case R.id.IV4:
                 condition = 4;
                 break;
-            case R.id.fab:
-                Snackbar.make(v, "blabla", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                break;
+
 
         }
         Intent i = new Intent(WorkoutActivity.this, SpecificExerciseActivity.class);

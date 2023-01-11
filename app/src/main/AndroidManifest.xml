@@ -19,6 +19,41 @@
 
 <!--            android:name=".SpecificExerciseActivity"-->
         <activity
+            android:name=".SettingsName"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TermsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PrivacyActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AboutUsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".UpdateDetails"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SpecificExerciseActivity"
             android:exported="false">
             <meta-data
@@ -57,7 +92,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".SettingsMain"
             android:exported="false"
             android:label="@string/title_activity_settings">
             <meta-data

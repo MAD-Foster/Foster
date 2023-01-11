@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         startActivity(i);
                         return true;
                     case R.id.DestSettings:
-                        i = new Intent(MainActivity.this, SettingsActivity.class);
+                        i = new Intent(MainActivity.this, SettingsMain.class);
                         startActivity(i);
                         return true;
                     case R.id.DestWorkoutPage:
@@ -177,8 +177,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent i = new Intent(MainActivity.this, MainActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestAboutApp) {
-//            Intent i = new Intent(MainActivity.this, AboutAppActivity.class);
-//            startActivity(i);
+            Intent i = new Intent(MainActivity.this, AboutUsActivity.class);
+            startActivity(i);
         } else if (item.getItemId() == R.id.DestLogout) {
 //            Intent i = new Intent(MainActivity.this, LogoutActivity.class);
 //            startActivity(i);
@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent i = new Intent(MainActivity.this, MusicActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestSettings) {
-            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+            Intent i = new Intent(MainActivity.this, SettingsMain.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestWorkoutPage) {
             Intent i = new Intent(MainActivity.this, WorkoutActivity.class);
@@ -239,7 +239,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(i);
                 break;
             case R.id.DestSettings:
-                i = new Intent(MainActivity.this, SettingsActivity.class);
+                i = new Intent(MainActivity.this, SettingsMain.class);
                 startActivity(i);
                 break;
             case R.id.DestWorkoutPage:
@@ -257,6 +257,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.DestStepsPage:
                 startActivity(new Intent(MainActivity.this, StepsPage.class));
                 return true;
+            case R.id.DestAboutApp:
+                startActivity(new Intent(MainActivity.this,AboutUsActivity.class));
             default:
                 return super.onOptionsItemSelected(item);
 

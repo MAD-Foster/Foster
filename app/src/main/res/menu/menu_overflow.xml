@@ -53,11 +53,6 @@
             app:showAsAction="ifRoom"
             android:title="@string/aboutapp_title" />
 
-        <item
-            android:id="@+id/DestLogout"
-            android:icon="@drawable/ic_baseline_logout_24"
-            app:showAsAction="never"
-            android:title="@string/logout_title"/>
     </group>
 
 </menu>

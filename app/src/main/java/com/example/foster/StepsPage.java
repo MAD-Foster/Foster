@@ -68,7 +68,7 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener,
         floatingActionButton.setOnClickListener(this);
         Toolbar toolbar = findViewById(R.id.TBStepsAct);
         bottomNavigationView = findViewById(R.id.bottom_nav_view_steps);
-        bottomNavigationView.setSelectedItemId(R.id.DestMusicPage);
+        bottomNavigationView.setSelectedItemId(R.id.DestStepsPage);
 
 
         setSupportActionBar(toolbar);
@@ -86,7 +86,7 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener,
                         startActivity(i);
                         return true;
                     case R.id.DestSettings:
-                        i = new Intent(StepsPage.this, SettingsActivity.class);
+                        i = new Intent(StepsPage.this, SettingsMain.class);
                         startActivity(i);
                         return true;
 
@@ -273,11 +273,11 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener,
             Intent i = new Intent(StepsPage.this, MainActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestAboutApp) {
-//            Intent i = new Intent(StepsPage.this, AboutAppActivity.class);
-//            startActivity(i);
+            Intent i = new Intent(StepsPage.this, AboutUsActivity.class);
+            startActivity(i);
         } else if (item.getItemId() == R.id.DestLogout) {
-//            Intent i = new Intent(StepsPage.this, LogoutActivity.class);
-//            startActivity(i);
+            Intent i = new Intent(StepsPage.this, LoginActivity.class);
+            startActivity(i);
         } else if (item.getItemId() == R.id.DestMusicPage) {
             Intent i = new Intent(StepsPage.this, MusicActivity.class);
             startActivity(i);
@@ -288,8 +288,8 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener,
             Intent i = new Intent(StepsPage.this, WorkoutActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestStepsPage) {
-//            Intent i = new Intent(StepsPage.this, StepsPage.class);
-//            startActivity(i);
+            Intent i = new Intent(StepsPage.this, StepsPage.class);
+            startActivity(i);
         }
 
 //        drawerLayout = findViewById(R.id.DLMain);

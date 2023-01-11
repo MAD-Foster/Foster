@@ -130,7 +130,7 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
         getMenuInflater().inflate(R.menu.menu_overflow, menu);
         return true;
     }
-    
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

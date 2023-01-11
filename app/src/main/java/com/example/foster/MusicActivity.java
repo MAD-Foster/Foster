@@ -167,11 +167,11 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
             Intent i = new Intent(MusicActivity.this, MainActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestAboutApp) {
-//            Intent i = new Intent(MusicActivity.this, AboutAppActivity.class);
-//            startActivity(i);
+            Intent i = new Intent(MusicActivity.this, AboutUsActivity.class);
+            startActivity(i);
         } else if (item.getItemId() == R.id.DestLogout) {
-//            Intent i = new Intent(MusicActivity.this, LogoutActivity.class);
-//            startActivity(i);
+            Intent i = new Intent(MusicActivity.this, LoginActivity.class);
+            startActivity(i);
         } else if (item.getItemId() == R.id.DestMusicPage) {
             Intent i = new Intent(MusicActivity.this, MusicActivity.class);
             startActivity(i);
@@ -182,8 +182,8 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
             Intent i = new Intent(MusicActivity.this, WorkoutActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestStepsPage) {
-//            Intent i = new Intent(MusicActivity.this, StepsActivity.class);
-//            startActivity(i);
+            Intent i = new Intent(MusicActivity.this, StepsPage.class);
+            startActivity(i);
         }
 
 //        drawerLayout = findViewById(R.id.DLMain);

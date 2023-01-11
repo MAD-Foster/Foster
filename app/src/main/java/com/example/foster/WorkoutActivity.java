@@ -14,6 +14,7 @@ import android.os.Bundle;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -52,6 +53,42 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
 
+        bottomNavigationView = findViewById(R.id.bottom_nav_view_workout);
+        bottomNavigationView.setSelectedItemId(R.id.DestWorkoutPage);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                System.out.println("bottom nav");
+                Intent i;
+                switch (item.getItemId()) {
+                    case R.id.DestHome:
+                        i = new Intent(WorkoutActivity.this, MainActivity.class);
+                        startActivity(i);
+                        return true;
+                    case R.id.DestSettings:
+                        i = new Intent(WorkoutActivity.this, SettingsMain.class);
+                        startActivity(i);
+                        return true;
+                    case R.id.DestWorkoutPage:
+                        i = new Intent(WorkoutActivity.this, WorkoutActivity.class);
+                        startActivity(i);
+                        return true;
+
+                    case R.id.DestMusicPage:
+                        i = new Intent(WorkoutActivity.this, MusicActivity.class);
+                        startActivity(i);
+                        return true;
+
+                    case R.id.DestStepsPage:
+                        i = new Intent(WorkoutActivity.this, StepsPage.class);
+                        startActivity(i);
+                        return true;
+
+                }
+                return false;
+            }
+
+        });
         drawerLayout = findViewById(R.id.DLWorkout);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
@@ -104,6 +141,7 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        System.out.println("side nav");
         Intent i;
         if (item.getItemId() == R.id.DestHome) {
             i = new Intent(WorkoutActivity.this, MainActivity.class);
@@ -125,8 +163,8 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
            i = new Intent(WorkoutActivity.this, WorkoutActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestStepsPage) {
-//            i = new Intent(WorkoutActivity.this, StepsActivity.class);
-//            startActivity(i);
+            i = new Intent(WorkoutActivity.this, StepsPage.class);
+            startActivity(i);
         }
 
         drawerLayout = findViewById(R.id.DLWorkout);

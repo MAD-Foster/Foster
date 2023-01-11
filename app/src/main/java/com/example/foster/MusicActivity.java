@@ -58,7 +58,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
 
 
         setSupportActionBar(toolbar);
-        navigationView = findViewById(R.id.sideNavMusic);
+            navigationView = findViewById(R.id.sideNavMusic);
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -87,8 +87,8 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
                         return true;
 
                     case R.id.DestStepsPage:
-//                Intent i = new Intent(MainActivity.this, StepsActivity.class);
-//                startActivity(i);
+                 i = new Intent(MusicActivity.this, StepsPage.class);
+                startActivity(i);
                         return true;
 
                 }

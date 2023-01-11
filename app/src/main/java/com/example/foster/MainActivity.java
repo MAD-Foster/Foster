@@ -127,9 +127,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     greetingTextView.setText("Welcome, " + fullName + "!");
                     fullNameTextView.setText(fullName);
                     emailTextView.setText(email);
-                    ageTextView.setText(age);
-                    weightTextView.setText(weight);
-                    heightTextView.setText(height);
+                    ageTextView.setText(weight);
+                    weightTextView.setText(height);
+                    heightTextView.setText(age);
 
                 }
             }

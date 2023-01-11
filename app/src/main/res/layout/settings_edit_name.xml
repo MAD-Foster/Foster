@@ -18,12 +18,13 @@
         app:layout_constraintVertical_bias="0.17" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextFirstName"
         android:layout_width="272dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -32,12 +33,13 @@
         app:layout_constraintVertical_bias="0.549" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextLastName"
         android:layout_width="272dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

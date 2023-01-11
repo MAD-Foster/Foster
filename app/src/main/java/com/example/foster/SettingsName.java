@@ -110,14 +110,7 @@ public class SettingsName extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Update" + key);
 
-        // creating a layout to write the new name
-        LinearLayout layout = new LinearLayout(this);
-        layout.setOrientation(LinearLayout.VERTICAL);
-        layout.setPadding(10, 10, 10, 10);
         final EditText editText = new EditText(this);
-        editText.setHint("Enter" + key);
-        layout.addView(editText);
-        builder.setView(layout);
 
         builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
             @Override

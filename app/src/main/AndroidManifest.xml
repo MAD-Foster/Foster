@@ -103,7 +103,7 @@
             android:name=".WorkoutActivity"
             android:exported="false"
             android:label="@string/title_activity_workout"
-            android:theme="@style/Theme.Foster.NoActionBar">
+           >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

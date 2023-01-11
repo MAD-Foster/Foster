@@ -116,7 +116,6 @@
         android:id="@+id/sideNavMusic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_gravity="start"
         android:background="@color/dark_maroon"
         app:headerLayout="@layout/nav_header"

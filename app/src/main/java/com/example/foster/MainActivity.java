@@ -86,8 +86,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         return true;
 
                     case R.id.DestStepsPage:
-//                Intent i = new Intent(MainActivity.this, StepsActivity.class);
-//                startActivity(i);
+                 i = new Intent(MainActivity.this, StepsPage.class);
+                startActivity(i);
                         return true;
 
                 }

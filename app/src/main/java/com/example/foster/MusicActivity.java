@@ -33,6 +33,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MusicActivity extends AppCompatActivity implements View.OnClickListener,NavigationView.OnNavigationItemSelectedListener {
 
@@ -230,9 +231,13 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(i);
                 break;
             case R.id.DestStepsPage:
-//                Intent i = new Intent(MusicActivity.this, StepsActivity.class);
-//                startActivity(i);
+                 i = new Intent(MusicActivity.this, StepsPage.class);
+                startActivity(i);
                 break;
+            case R.id.actionLogout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MusicActivity.this, LoginActivity.class));
+                return true;
 
         }
 //        if (toggle.onOptionsItemSelected(item)) {

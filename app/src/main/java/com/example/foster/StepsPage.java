@@ -28,6 +28,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -241,7 +242,10 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener,
                 i = new Intent(StepsPage.this, StepsPage.class);
                 startActivity(i);
                 break;
-
+            case R.id.actionLogout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(StepsPage.this, LoginActivity.class));
+                return true;
         }
 //        if (toggle.onOptionsItemSelected(item)) {
 //            return true;

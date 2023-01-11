@@ -33,6 +33,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.foster.databinding.ActivityWorkoutBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class WorkoutActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
@@ -129,15 +130,7 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
         getMenuInflater().inflate(R.menu.menu_overflow, menu);
         return true;
     }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if (toggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+    
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -147,17 +140,17 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
             i = new Intent(WorkoutActivity.this, MainActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestAboutApp) {
-//            i = new Intent(WorkoutActivity.this, AboutappActivity.class);
-//            startActivity(i);
+            i = new Intent(WorkoutActivity.this, AboutUsActivity.class);
+            startActivity(i);
         } else if (item.getItemId() == R.id.DestLogout) {
-//            i=new Intent(WorkoutActivity.this,LogoutActivity.class);
-//            startActivity(i);
+            i=new Intent(WorkoutActivity.this,LoginActivity.class);
+            startActivity(i);
         } else if (item.getItemId() == R.id.DestMusicPage) {
             i=new Intent(WorkoutActivity.this,MusicActivity.class);
             startActivity(i);
 
         } else if (item.getItemId() == R.id.DestSettings) {
-            i=new Intent(WorkoutActivity.this,SettingsActivity.class);
+            i=new Intent(WorkoutActivity.this,SettingsMain.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestWorkoutPage) {
            i = new Intent(WorkoutActivity.this, WorkoutActivity.class);
@@ -225,5 +218,44 @@ public class WorkoutActivity extends AppCompatActivity implements NavigationView
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        System.out.println("overflow menu");
+        Intent i;
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.DestHome:
+                i = new Intent(WorkoutActivity.this, MainActivity.class);
+                startActivity(i);
+                break;
+            case R.id.DestSettings:
+                i = new Intent(WorkoutActivity.this, SettingsMain.class);
+                startActivity(i);
+                break;
+            case R.id.DestWorkoutPage:
+                i = new Intent(WorkoutActivity.this, WorkoutActivity.class);
+                startActivity(i);
+                break;
+            case R.id.DestMusicPage:
+                i = new Intent(WorkoutActivity.this, MusicActivity.class);
+                startActivity(i);
+                break;
+            case R.id.actionLogout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(WorkoutActivity.this, LoginActivity.class));
+                return true;
+            case R.id.DestStepsPage:
+                startActivity(new Intent(WorkoutActivity.this, StepsPage.class));
+                return true;
+            case R.id.DestAboutApp:
+                startActivity(new Intent(WorkoutActivity.this,AboutUsActivity.class));
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }return super.onOptionsItemSelected(item);
+    }
+
 
 }

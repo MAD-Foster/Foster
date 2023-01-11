@@ -90,8 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="serif"
+            android:layout_marginTop="10dp"
             android:text="@string/music_title"
             android:textColor="@color/white"
             android:textSize="30sp"
@@ -112,16 +111,7 @@
     <!--        app:defaultNavHost="true"-->
     <!--        app:navGraph="@navigation/navigation_foster" />-->
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/sideNavMusic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:background="@color/dark_maroon"
-        app:headerLayout="@layout/nav_header"
-        app:itemIconTint="@null"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/menu_side" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -160,6 +150,16 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/sideNavMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@color/dark_maroon"
+        app:headerLayout="@layout/nav_header"
+        app:itemIconTint="@null"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_side" />
 </androidx.drawerlayout.widget.DrawerLayout>
 
 

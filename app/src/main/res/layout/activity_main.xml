@@ -305,7 +305,7 @@
             android:id="@+id/greeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:text="WELCOME BACK!!!"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
@@ -318,7 +318,7 @@
             android:id="@+id/greeting2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="95dp"
             android:text="Let's pick up where we left off"
             android:textColor="#971F3C"
             android:textStyle="bold|italic"
@@ -333,11 +333,11 @@
         android:id="@+id/songs_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="50dp"
         android:text="@string/home_title"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
 

@@ -120,9 +120,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            android:text="Step Detector"
-            android:textColor="#FFFFFF"
+            android:text="STEP DETECTOR"
+            android:textColor="#932B40"
             android:elevation="2dp"
+            android:textStyle="bold|italic"
+            android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>

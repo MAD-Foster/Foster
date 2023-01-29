@@ -157,11 +157,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //    }
     @Override
     public void onClick(View v) {
-        System.out.println("fab");
-        System.out.println("fab");
-        System.out.println("fab");
-        System.out.println("fab");
-        System.out.println("fab");
+
 
         if (v.getId() == R.id.fabMain) {
             Intent i = new Intent(MainActivity.this, MainActivity.class);
@@ -180,8 +176,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent i = new Intent(MainActivity.this, AboutUsActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestLogout) {
-//            Intent i = new Intent(MainActivity.this, LogoutActivity.class);
-//            startActivity(i);
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+
         } else if (item.getItemId() == R.id.DestMusicPage) {
             Intent i = new Intent(MainActivity.this, MusicActivity.class);
             startActivity(i);

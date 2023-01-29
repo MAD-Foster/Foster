@@ -72,35 +72,39 @@
 <!--        app:layout_constraintVertical_bias="0.423" />-->
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextFirstName"
         android:layout_width="272dp"
         android:layout_height="48dp"
         android:layout_marginTop="21dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Name"
+        android:inputType="textPersonName"
         android:textColor="#932B40"
         android:textColorHint="@color/dark_maroon"
 
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVEnterName" />
+        app:layout_constraintTop_toBottomOf="@+id/TVEnterName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextLastName"
         android:layout_width="272dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Name"
-        android:textColorHint="@color/dark_maroon"
+        android:inputType="textPersonName"
         android:textColor="#932B40"
+        android:textColorHint="@color/dark_maroon"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVEnterName2" />
+        app:layout_constraintTop_toBottomOf="@+id/TVEnterName2"
+        app:layout_constraintVertical_bias="0.055" />
 
     <TextView
         android:id="@+id/TVUpdateName"
@@ -148,12 +152,11 @@
         android:layout_height="52dp"
         android:backgroundTint="#932B40"
         android:text="CONFIRM"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
+        app:layout_constraintVertical_bias="0.842" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

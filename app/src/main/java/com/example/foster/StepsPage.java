@@ -339,6 +339,7 @@ public class StepsPage extends AppCompatActivity implements SensorEventListener,
             Intent i = new Intent(StepsPage.this, AboutUsActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestLogout) {
+            FirebaseAuth.getInstance().signOut();
             Intent i = new Intent(StepsPage.this, LoginActivity.class);
             startActivity(i);
         } else if (item.getItemId() == R.id.DestMusicPage) {

@@ -19,12 +19,6 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        for(ExerciseEnum a:ExerciseEnum.values()){
-            for(String b:a.getExercises().keySet()){
-                System.out.println(a+" :"+b);
-
-            }
-        }
         Timer timer =new Timer();
         timer.schedule(new TimerTask() {
             @Override
